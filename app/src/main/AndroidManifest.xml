@@ -10,8 +10,17 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
+            android:name=".BerandaActivity"
+            android:label="@string/title_activity_beranda"></activity>
+        <activity
             android:name=".ui.login.LoginActivity"
-            android:label="@string/title_activity_login"></activity>
+            android:label="@string/title_activity_login">
+
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.scytec.datamobile.vd.gui.android.AppPreferenceActivity"></action> -->
+            <!-- <category android:name="android.intent.category.DEFAULT"></category> -->
+            <!-- </intent-filter> -->
+        </activity>
         <activity
             android:name=".SplashScreen"
             android:theme="@style/Theme.AppCompat.NoActionBar">
