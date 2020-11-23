@@ -17,9 +17,11 @@ import android.widget.EditText
 import android.widget.ProgressBar
 import android.widget.Toast
 import com.example.apamproject.BerandaActivity
+import com.example.apamproject.MainActivity
 
 import com.example.apamproject.R
 import com.example.apamproject.databinding.ActivityLoginBinding
+import com.example.apamproject.databinding.ActivityWelcomeScreenBinding
 
 class LoginActivity : AppCompatActivity() {
 
@@ -31,6 +33,11 @@ class LoginActivity : AppCompatActivity() {
         binding = ActivityLoginBinding.inflate(layoutInflater)
         val view = binding.root
         setContentView(view)
+
+        binding.back.setOnClickListener{
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+        }
 
         val email = binding.email
         val password = binding.password

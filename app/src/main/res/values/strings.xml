@@ -27,7 +27,7 @@
     <string name="title_pendaftaran">Pendaftaran Online</string>
     <string name="title_dokter">Jadwal Dokter</string>
     <string name="title_operasi">Jadwal Operasi</string>
-    <string name="poliklinik">Poliklinik Penyakit Dalam</string>
+    <string name="poliklinik">Penyakit Dalam</string>
     <string name="dokter">dr. Reza Mahdi, Sp. PD</string>
     <string name="debitur">BPJS</string>
     <string name="waktu">Selasa, 30 November 2020</string>
@@ -38,5 +38,14 @@
         <item>An.</item>
         <item>By.</item>
     </string-array>
+    <string name="title_antrian">Antrian Anda</string>
+    <string name="title_waktu">Waktu</string>
+    <string name="jam">07:08:33</string>
+    <string name="title_poliklinik">Poliklinik</string>
+    <string name="title_debitur">Debitur</string>
+    <string name="antrian_anda">Antrian anda</string>
+    <string name="antrian_saat_ini">Antrian saat ini</string>
+    <string name="nomor_saat_ini">D3</string>
+    <string name="nomor_anda">D7</string>
 
 </resources>

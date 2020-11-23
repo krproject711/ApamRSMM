@@ -1,5 +1,6 @@
 package com.example.apamproject
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.apamproject.databinding.ActivityBerandaBinding
@@ -13,6 +14,10 @@ class BerandaActivity : AppCompatActivity() {
         val view = binding.root
         setContentView(view)
 
+        binding.antrian.setOnClickListener{
+            val intent = Intent(this, AntrianActivity::class.java)
+            startActivity(intent)
+        }
     }
 
 }
