@@ -22,4 +22,11 @@
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
+    <string name="title_pendaftaran">Pendaftaran Online</string>
+    <string name="title_dokter">Jadwal Dokter</string>
+    <string name="title_operasi">Jadwal Operasi</string>
+    <string name="poliklinik">Poliklinik Penyakit Dalam</string>
+    <string name="dokter">dr. Reza Mahdi, Sp. PD</string>
+    <string name="debitur">BPJS</string>
+    <string name="waktu">Selasa, 30 November 2020</string>
 </resources>
