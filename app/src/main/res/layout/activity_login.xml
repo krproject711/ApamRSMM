@@ -59,7 +59,7 @@
         app:layout_constraintTop_toTopOf="@+id/bgLayout" />
 
     <EditText
-        android:id="@+id/nik"
+        android:id="@+id/email"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:ems="10"
