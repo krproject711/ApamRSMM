@@ -47,5 +47,6 @@
     <string name="antrian_saat_ini">Antrian saat ini</string>
     <string name="nomor_saat_ini">D3</string>
     <string name="nomor_anda">D7</string>
+    <string name="pilih_poliklinik">Pilih Poliklinik</string>
 
 </resources>

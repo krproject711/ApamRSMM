@@ -18,6 +18,11 @@ class BerandaActivity : AppCompatActivity() {
             val intent = Intent(this, AntrianActivity::class.java)
             startActivity(intent)
         }
+
+        binding.daftar.setOnClickListener {
+            val intent = Intent(this, PoliklinikActivity::class.java)
+            startActivity(intent)
+        }
     }
 
 }
