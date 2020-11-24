@@ -2,14 +2,14 @@ package com.example.apamproject
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.example.apamproject.databinding.ActivityJadwalDokterBinding
+import com.example.apamproject.databinding.ActivityJadwalOperasiBinding
 
-class JadwalDokterActivity : AppCompatActivity() {
-    private lateinit var binding: ActivityJadwalDokterBinding
+class JadwalOperasiActivity : AppCompatActivity() {
+    private lateinit var binding: ActivityJadwalOperasiBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityJadwalDokterBinding.inflate(layoutInflater)
+        binding = ActivityJadwalOperasiBinding.inflate(layoutInflater)
         val view = binding.root
         setContentView(view)
     }

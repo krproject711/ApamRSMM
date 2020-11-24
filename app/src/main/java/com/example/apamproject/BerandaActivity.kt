@@ -23,6 +23,16 @@ class BerandaActivity : AppCompatActivity() {
             val intent = Intent(this, PoliklinikActivity::class.java)
             startActivity(intent)
         }
+
+        binding.jadwalDokter.setOnClickListener {
+            val intent = Intent(this, JadwalDokterActivity::class.java)
+            startActivity(intent)
+        }
+
+        binding.jadwalOperasi.setOnClickListener {
+            val intent = Intent(this, JadwalOperasiActivity::class.java)
+            startActivity(intent)
+        }
     }
 
 }

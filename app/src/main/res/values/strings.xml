@@ -48,5 +48,8 @@
     <string name="nomor_saat_ini">D3</string>
     <string name="nomor_anda">D7</string>
     <string name="pilih_poliklinik">Pilih Poliklinik</string>
+    <string name="title_jadwal_dokter">Jadwal Dokter</string>
+    <string name="hari">Senin</string>
+    <string name="range_jam">(07.00 - 12.00)</string>
 
 </resources>
