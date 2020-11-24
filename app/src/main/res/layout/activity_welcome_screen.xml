@@ -14,7 +14,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintStart_toStartOf="parent"
+        tools:viewBindingIgnore="true">
 
     </RelativeLayout>
 
@@ -25,7 +26,8 @@
         android:orientation="vertical"
         app:layout_constraintBottom_toTopOf="@+id/bgLayout"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        tools:viewBindingIgnore="true">
 
         <ImageView
             android:id="@+id/imageView2"
@@ -33,7 +35,8 @@
             android:layout_height="wrap_content"
             android:scaleX="0.6"
             android:scaleY="0.6"
-            app:srcCompat="@drawable/logoapam" />
+            app:srcCompat="@drawable/logoapam"
+            tools:viewBindingIgnore="true"/>
 
         <TextView
             android:id="@+id/judul"
@@ -45,7 +48,8 @@
             android:textAlignment="center"
             android:textColor="#000000"
             android:textSize="34sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            tools:viewBindingIgnore="true" />
 
         <TextView
             android:id="@+id/namaAplikasi"
@@ -57,7 +61,8 @@
             android:textAlignment="center"
             android:textColor="#000000"
             android:textSize="22sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            tools:viewBindingIgnore="true"/>
 
     </LinearLayout>
 
@@ -67,7 +72,8 @@
         android:gravity="bottom|end"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="@+id/bgLayout"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        tools:viewBindingIgnore="true">
 
         <Button
             android:id="@+id/masuk_button"

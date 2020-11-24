@@ -13,14 +13,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <ImageView
-            android:id="@+id/eclipse"
-            android:layout_width="120dp"
-            android:layout_height="103dp"
-            android:layout_gravity="right"
-            app:srcCompat="@drawable/eclipse" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:viewBindingIgnore="true">
 
         <ImageView
             android:id="@+id/header"
@@ -28,19 +22,30 @@
             android:layout_height="380dp"
             android:adjustViewBounds="false"
             android:background="#376EB6"
-            android:scaleType="fitCenter" />
+            android:scaleType="fitCenter"
+            tools:viewBindingIgnore="true"/>
+
+        <ImageView
+            android:id="@+id/eclipse"
+            android:layout_width="120dp"
+            android:layout_height="103dp"
+            android:layout_gravity="right"
+            app:srcCompat="@drawable/eclipse"
+            tools:viewBindingIgnore="true"/>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            tools:viewBindingIgnore="true">
 
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="20dp"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                tools:viewBindingIgnore="true">
 
                 <ImageButton
                     android:id="@+id/back_button"
@@ -58,7 +63,8 @@
                     android:text="@string/title_antrian"
                     android:textAppearance="@style/TextAppearance.AppCompat.Body2"
                     android:textColor="#FFFFFF"
-                    android:textSize="20sp" />
+                    android:textSize="20sp"
+                    tools:viewBindingIgnore="true"/>
             </LinearLayout>
 
             <androidx.cardview.widget.CardView
@@ -67,32 +73,37 @@
                 android:layout_height="451dp"
                 android:layout_marginStart="20dp"
                 android:layout_marginEnd="20dp"
-                app:cardCornerRadius="15dp">
+                app:cardCornerRadius="15dp"
+                tools:viewBindingIgnore="true">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
                     android:paddingStart="50dp"
-                    android:paddingEnd="50dp">
+                    android:paddingEnd="50dp"
+                    tools:viewBindingIgnore="true">
 
                     <ImageView
                         android:id="@+id/logo"
                         android:layout_width="260dp"
                         android:layout_height="90dp"
                         android:layout_gravity="center_horizontal"
-                        app:srcCompat="@drawable/logo_lama" />
+                        app:srcCompat="@drawable/logo_lama"
+                        tools:viewBindingIgnore="true"/>
 
                     <TextView
                         android:id="@+id/waktu_title"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/title_waktu" />
+                        android:text="@string/title_waktu"
+                        tools:viewBindingIgnore="true"/>
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal">
+                        android:orientation="horizontal"
+                        tools:viewBindingIgnore="true">
 
                         <TextView
                             android:id="@+id/jam"
@@ -120,7 +131,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="20dp"
-                        android:text="@string/title_poliklinik" />
+                        android:text="@string/title_poliklinik"
+                        tools:viewBindingIgnore="true"/>
 
                     <TextView
                         android:id="@+id/poliklinik_view"
@@ -136,7 +148,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="20dp"
-                        android:text="@string/title_debitur" />
+                        android:text="@string/title_debitur"
+                        tools:viewBindingIgnore="true"/>
 
                     <TextView
                         android:id="@+id/debitur_view"
@@ -152,7 +165,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="20dp"
-                        android:text="@string/antrian_anda" />
+                        android:text="@string/antrian_anda"
+                        tools:viewBindingIgnore="true"/>
 
                     <TextView
                         android:id="@+id/debitur_view2"
@@ -171,7 +185,8 @@
                         android:text="@string/antrian_saat_ini"
                         android:textAlignment="center"
                         android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-                        android:textSize="18sp" />
+                        android:textSize="18sp"
+                        tools:viewBindingIgnore="true"/>
 
                     <TextView
                         android:id="@+id/antrian_saat_ini"
@@ -193,17 +208,21 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="20dp"
                 android:padding="20dp"
-                app:cardCornerRadius="10dp">
+                app:cardCornerRadius="10dp"
+                tools:viewBindingIgnore="true">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:orientation="horizontal">
+                    android:orientation="horizontal"
+                    tools:viewBindingIgnore="true">
 
                     <LinearLayout
                         android:layout_width="70dp"
                         android:layout_height="match_parent"
-                        android:orientation="vertical">
+                        android:orientation="vertical"
+                        tools:viewBindingIgnore="true"
+                        android:padding="5dp">
 
                         <ImageView
                             android:id="@+id/imageView6"
@@ -227,7 +246,8 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:orientation="vertical">
+                        android:orientation="vertical"
+                        tools:viewBindingIgnore="true">
 
                         <TextView
                             android:id="@+id/dokter"

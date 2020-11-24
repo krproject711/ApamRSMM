@@ -12,18 +12,21 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        tools:viewBindingIgnore="true">
 
         <LinearLayout
             android:id="@+id/layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            tools:viewBindingIgnore="true">
 
             <FrameLayout
                 android:id="@+id/frame"
                 android:layout_width="match_parent"
-                android:layout_height="372dp">
+                android:layout_height="372dp"
+                tools:viewBindingIgnore="true">
 
                 <ImageView
                     android:id="@+id/header"
@@ -31,14 +34,16 @@
                     android:layout_height="250dp"
                     android:adjustViewBounds="false"
                     android:background="#376EB6"
-                    android:scaleType="fitCenter" />
+                    android:scaleType="fitCenter"
+                    tools:viewBindingIgnore="true"/>
 
                 <ImageView
                     android:id="@+id/eclipse"
                     android:layout_width="120dp"
                     android:layout_height="103dp"
                     android:layout_gravity="right"
-                    app:srcCompat="@drawable/eclipse" />
+                    app:srcCompat="@drawable/eclipse"
+                    tools:viewBindingIgnore="true"/>
 
                 <LinearLayout
                     android:id="@+id/linierV"
@@ -46,7 +51,8 @@
                     android:layout_height="85dp"
                     android:layout_marginLeft="20dp"
                     android:layout_marginTop="50dp"
-                    android:orientation="horizontal">
+                    android:orientation="horizontal"
+                    tools:viewBindingIgnore="true">
 
                     <ImageView
                         android:id="@+id/imageView4"
@@ -61,7 +67,8 @@
                         android:layout_marginLeft="10dp"
                         android:layout_marginTop="15dp"
                         android:layout_weight="1"
-                        android:orientation="vertical">
+                        android:orientation="vertical"
+                        tools:viewBindingIgnore="true">
 
                         <TextView
                             android:id="@+id/nama"
@@ -96,7 +103,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="200dp"
                     android:layout_marginTop="150dp"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    tools:viewBindingIgnore="true">
 
                     <androidx.cardview.widget.CardView
                         android:id="@+id/corousel"
@@ -109,7 +117,8 @@
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:orientation="horizontal">
+                            android:orientation="horizontal"
+                            tools:viewBindingIgnore="true">
 
                             <ImageView
                                 android:id="@+id/imageView5"
@@ -158,13 +167,15 @@
                 android:layout_marginStart="20dp"
                 android:text="Layanan Kami"
                 android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-                android:textSize="18sp" />
+                android:textSize="18sp"
+                tools:viewBindingIgnore="true"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:padding="10dp">
+                android:padding="10dp"
+                tools:viewBindingIgnore="true">
 
                 <Button
                     android:id="@+id/daftar"
@@ -211,12 +222,14 @@
                 android:layout_marginStart="20dp"
                 android:text="@string/title_antrian"
                 android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-                android:textSize="18sp" />
+                android:textSize="18sp"
+                tools:viewBindingIgnore="true"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="150dp"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                tools:viewBindingIgnore="true">
 
                 <androidx.cardview.widget.CardView
                     android:id="@+id/antrian"
@@ -229,12 +242,15 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:orientation="horizontal">
+                        android:orientation="horizontal"
+                        tools:viewBindingIgnore="true">
 
                         <LinearLayout
                             android:layout_width="70dp"
                             android:layout_height="match_parent"
-                            android:orientation="vertical">
+                            android:orientation="vertical"
+                            android:padding="5dp"
+                            tools:viewBindingIgnore="true">
 
                             <ImageView
                                 android:id="@+id/imageView6"
@@ -258,7 +274,8 @@
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:orientation="vertical">
+                            android:orientation="vertical"
+                            tools:viewBindingIgnore="true">
 
                             <TextView
                                 android:id="@+id/dokter"

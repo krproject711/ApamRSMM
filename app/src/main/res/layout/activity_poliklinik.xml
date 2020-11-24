@@ -13,7 +13,8 @@
         android:adjustViewBounds="false"
         android:background="#376EB6"
         android:scaleType="fitCenter"
-        tools:ignore="MissingConstraints" />
+        tools:ignore="MissingConstraints"
+        tools:viewBindingIgnore="true" />
 
     <ImageView
         android:id="@+id/eclipse"
@@ -22,7 +23,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/eclipse"
-        tools:ignore="MissingConstraints" />
+        tools:ignore="MissingConstraints"
+        tools:viewBindingIgnore="true" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -30,14 +32,16 @@
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintStart_toStartOf="parent"
+        tools:viewBindingIgnore="true">
 
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="20dp"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            tools:viewBindingIgnore="true">
 
             <ImageButton
                 android:id="@+id/back_button"
@@ -55,23 +59,27 @@
                 android:text="@string/pilih_poliklinik"
                 android:textAppearance="@style/TextAppearance.AppCompat.Body2"
                 android:textColor="#FFFFFF"
-                android:textSize="20sp" />
+                android:textSize="20sp"
+                tools:viewBindingIgnore="true" />
         </LinearLayout>
 
         <androidx.cardview.widget.CardView
             android:id="@+id/corousel"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            app:cardCornerRadius="30dp">
+            app:cardCornerRadius="30dp"
+            tools:viewBindingIgnore="true">
 
             <TableLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                tools:viewBindingIgnore="true" >
 
                 <TableRow
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:padding="15dp">
+                    android:padding="15dp"
+                    tools:viewBindingIgnore="true">
 
                     <Button
                         android:id="@+id/daftar2"
