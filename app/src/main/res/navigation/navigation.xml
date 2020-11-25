@@ -3,22 +3,22 @@
     xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/navigation">
     <item
         android:id="@+id/beranda_navigation"
-        android:icon="@drawable/"
+        android:icon="@drawable/ic_baseline_date_range_24"
         android:title="Beranda"
         />
     <item
         android:id="@+id/riwayat_navigation"
-        android:icon="@drawable/"
+        android:icon="@drawable/ic_baseline_date_range_24"
         android:title="Riwayat"
         />
-    <item
-        android:id="@+id/berita_navigation"
-        android:icon="@drawable/"
-        android:title="Berita"
-        />
-    <item
-        android:id="@+id/profil_navigation"
-        android:icon="@drawable/"
-        android:title="Profile"
-        />
+<!--    <item-->
+<!--        android:id="@+id/berita_navigation"-->
+<!--        android:icon="@drawable/ic_baseline_date_range_24"-->
+<!--        android:title="Berita"-->
+<!--        />-->
+<!--    <item-->
+<!--        android:id="@+id/profil_navigation"-->
+<!--        android:icon="@drawable/ic_baseline_date_range_24"-->
+<!--        android:title="Profile"-->
+<!--        />-->
 </menu>

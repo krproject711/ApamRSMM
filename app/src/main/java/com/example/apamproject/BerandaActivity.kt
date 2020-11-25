@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.example.apamproject.databinding.ActivityBerandaBinding
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import kotlinx.android.synthetic.main.activity_beranda.*
 
 class BerandaActivity : AppCompatActivity() {
     private lateinit var binding: ActivityBerandaBinding
@@ -37,39 +38,42 @@ class BerandaActivity : AppCompatActivity() {
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
+
+        binding = ActivityBerandaBinding.inflate(layoutInflater)
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_beranda)
-        navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener)
+        navigation.setOnNavigationItemReselectedListener { mOnNavigationItemSelectedListener }
         val fragment = BerandaFragment.newInstance()
         addFragment(fragment)
+
+
+        binding.antrian.setOnClickListener{
+            val intent = Intent(this, AntrianActivity::class.java)
+            startActivity(intent)
+        }
+
+        binding.daftar.setOnClickListener {
+            val intent = Intent(this, PoliklinikActivity::class.java)
+            startActivity(intent)
+        }
+
+        binding.jadwalDokter.setOnClickListener {
+            val intent = Intent(this, JadwalDokterActivity::class.java)
+            startActivity(intent)
+        }
+
+        binding.jadwalOperasi.setOnClickListener {
+            val intent = Intent(this, JadwalOperasiActivity::class.java)
+            startActivity(intent)
+        }
 
     }
 //    override fun onCreate(savedInstanceState: Bundle?) {
 //        super.onCreate(savedInstanceState)
-//        binding = ActivityBerandaBinding.inflate(layoutInflater)
 //        val view = binding.root
 //        setContentView(view)
 
 
-//        binding.antrian.setOnClickListener{
-//            val intent = Intent(this, AntrianActivity::class.java)
-//            startActivity(intent)
-//        }
-//
-//        binding.daftar.setOnClickListener {
-//            val intent = Intent(this, PoliklinikActivity::class.java)
-//            startActivity(intent)
-//        }
-//
-//        binding.jadwalDokter.setOnClickListener {
-//            val intent = Intent(this, JadwalDokterActivity::class.java)
-//            startActivity(intent)
-//        }
-//
-//        binding.jadwalOperasi.setOnClickListener {
-//            val intent = Intent(this, JadwalOperasiActivity::class.java)
-//            startActivity(intent)
-//        }
 //    }
 
 }

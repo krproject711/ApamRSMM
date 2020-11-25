@@ -51,12 +51,12 @@
                 app:srcCompat="@drawable/ic_baseline_arrow_back_24" />
 
             <TextView
-                android:id="@+id/title_jadwal_dokter"
+                android:id="@+id/title_operasi"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:padding="10dp"
-                android:text="@string/title_jadwal_dokter"
+                android:text="@string/title_operasi"
                 android:textAppearance="@style/TextAppearance.AppCompat.Body2"
                 android:textColor="#FFFFFF"
                 android:textSize="20sp"
