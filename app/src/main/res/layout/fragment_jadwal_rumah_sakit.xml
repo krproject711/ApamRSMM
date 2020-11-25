@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".JadwalRumahSakitFragment">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="20dp"
+        tools:viewBindingIgnore="true">
+
+        <SearchView
+            android:id="@+id/cari_jadwal"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:fadingEdge="horizontal|vertical"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+        </SearchView>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="5dp"
+            tools:viewBindingIgnore="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                tools:viewBindingIgnore="true">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp"
+                    app:cardCornerRadius="10dp"
+                    tools:viewBindingIgnore="true">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:padding="10dp"
+                        tools:viewBindingIgnore="true">
+
+                        <TextView
+                            android:id="@+id/jenis_operasi"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/poliklinik"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:id="@+id/dokter_operasi"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/dokter" />
+
+                        <TextView
+                            android:id="@+id/waktu_operasi"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/waktu" />
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
+</FrameLayout>

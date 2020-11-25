@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">APAM Project</string>
+    <string name="app_name">APAM Mobile</string>
     <string name="title_activity_splash_screen">SplashScreen</string>
     <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">First Fragment</string>
@@ -51,5 +51,6 @@
     <string name="title_jadwal_dokter">Jadwal Dokter</string>
     <string name="hari">Senin</string>
     <string name="range_jam">(07.00 - 12.00)</string>
+    <string name="jenis_operasi">HERNIA</string>
 
 </resources>
