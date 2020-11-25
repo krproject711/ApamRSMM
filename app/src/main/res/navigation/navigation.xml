@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/navigation">
+    <item
+        android:id="@+id/beranda_navigation"
+        android:icon="@drawable/"
+        android:title="Beranda"
+        />
+    <item
+        android:id="@+id/riwayat_navigation"
+        android:icon="@drawable/"
+        android:title="Riwayat"
+        />
+    <item
+        android:id="@+id/berita_navigation"
+        android:icon="@drawable/"
+        android:title="Berita"
+        />
+    <item
+        android:id="@+id/profil_navigation"
+        android:icon="@drawable/"
+        android:title="Profile"
+        />
+</menu>
