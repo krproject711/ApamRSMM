@@ -52,6 +52,25 @@
     <string name="hari">Senin</string>
     <string name="range_jam">(07.00 - 12.00)</string>
     <string name="jenis_operasi">HERNIA</string>
-
-
+    <string name="daftar_poliklinik">Daftar Poliklinik</string>
+    <string name="title_daftar">Lengkapi data dibawah ini</string>
+    <string-array name="cara_datang">
+        <item>- Pilih Cara Datang -</item>
+        <item>Datang Sendiri</item>
+        <item>Puskesmas</item>
+        <item>Klinik</item>
+        <item>Rumah Sakit Lain</item>
+    </string-array>
+    <string-array name="dokter_tujuan">
+        <item>- Pilih Dokter -</item>
+        <item>dr. Reza Mahdi, Sp. PD</item>
+        <item>dr. Sopyan, Sp. PD</item>
+    </string-array>
+    <string-array name="pilih_debitur">
+        <item>- Pilih Debitur -</item>
+        <item>UMUM</item>
+        <item>BPJS</item>
+        <item>Prudential</item>
+        <item>AXA</item>
+    </string-array>
 </resources>

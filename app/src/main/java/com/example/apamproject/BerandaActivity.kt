@@ -37,37 +37,37 @@ class BerandaActivity : AppCompatActivity() {
             .commit()
     }
 
-    override fun onCreate(savedInstanceState: Bundle?) {
+//    override fun onCreate(savedInstanceState: Bundle?) {
+//
+//        binding = ActivityBerandaBinding.inflate(layoutInflater)
+//        super.onCreate(savedInstanceState)
+//        setContentView(R.layout.activity_beranda)
+//        navigation.setOnNavigationItemReselectedListener { mOnNavigationItemSelectedListener }
+//        val fragment = BerandaFragment.newInstance()
+//        addFragment(fragment)
+//
+//
+//        binding.antrian.setOnClickListener{
+//            val intent = Intent(this, AntrianActivity::class.java)
+//            startActivity(intent)
+//        }
+//
+//        binding.daftar.setOnClickListener {
+//            val intent = Intent(this, PoliklinikActivity::class.java)
+//            startActivity(intent)
+//        }
+//
+//        binding.jadwalDokter.setOnClickListener {
+//            val intent = Intent(this, JadwalDokterActivity::class.java)
+//            startActivity(intent)
+//        }
+//
+//        binding.jadwalOperasi.setOnClickListener {
+//            val intent = Intent(this, JadwalOperasiActivity::class.java)
+//            startActivity(intent)
+//        }
 
-        binding = ActivityBerandaBinding.inflate(layoutInflater)
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_beranda)
-        navigation.setOnNavigationItemReselectedListener { mOnNavigationItemSelectedListener }
-        val fragment = BerandaFragment.newInstance()
-        addFragment(fragment)
-
-
-        binding.antrian.setOnClickListener{
-            val intent = Intent(this, AntrianActivity::class.java)
-            startActivity(intent)
-        }
-
-        binding.daftar.setOnClickListener {
-            val intent = Intent(this, PoliklinikActivity::class.java)
-            startActivity(intent)
-        }
-
-        binding.jadwalDokter.setOnClickListener {
-            val intent = Intent(this, JadwalDokterActivity::class.java)
-            startActivity(intent)
-        }
-
-        binding.jadwalOperasi.setOnClickListener {
-            val intent = Intent(this, JadwalOperasiActivity::class.java)
-            startActivity(intent)
-        }
-
-    }
+//    }
 //    override fun onCreate(savedInstanceState: Bundle?) {
 //        super.onCreate(savedInstanceState)
 //        val view = binding.root
