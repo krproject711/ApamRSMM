@@ -14,7 +14,9 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="-76dp">
+        tools:layout_editor_absoluteY="-76dp"
+        tools:ignore="MissingConstraints"
+        tools:viewBindingIgnore="true">
 
     </RelativeLayout>
 
@@ -40,7 +42,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/bgLayout">
+        app:layout_constraintTop_toBottomOf="@+id/bgLayout"
+        tools:viewBindingIgnore="true">
 
         <TextView
             android:id="@+id/greeting"
@@ -51,7 +54,8 @@
             android:text="@string/title_register"
             android:textAlignment="center"
             android:textColor="#000000"
-            android:textSize="30sp" />
+            android:textSize="30sp"
+            tools:viewBindingIgnore="true"/>
 
         <EditText
             android:id="@+id/nik"
@@ -69,7 +73,8 @@
             android:layout_width="297dp"
             android:layout_height="52dp"
             android:layout_marginBottom="20dp"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            tools:viewBindingIgnore="true">
 
             <Spinner
                 android:id="@+id/jenis_kelamin"
@@ -103,7 +108,7 @@
             android:textSize="24sp" />
 
         <EditText
-            android:id="@+id/email"
+            android:id="@+id/email_register"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:layout_marginBottom="20dp"
@@ -116,7 +121,7 @@
             android:textSize="24sp" />
 
         <EditText
-            android:id="@+id/password"
+            android:id="@+id/password_register"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -148,9 +153,8 @@
         android:layout_marginBottom="64dp"
         android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/password"
-        app:layout_constraintStart_toStartOf="@+id/password"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.3" />
+        app:layout_constraintVertical_bias="0.3"
+        tools:ignore="MissingConstraints" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

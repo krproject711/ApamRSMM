@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">APAM Project</string>
+    <string name="app_name">APAM Mobile</string>
     <string name="title_activity_splash_screen">SplashScreen</string>
     <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">First Fragment</string>
@@ -27,7 +27,7 @@
     <string name="title_pendaftaran">Pendaftaran Online</string>
     <string name="title_dokter">Jadwal Dokter</string>
     <string name="title_operasi">Jadwal Operasi</string>
-    <string name="poliklinik">Poliklinik Penyakit Dalam</string>
+    <string name="poliklinik">Penyakit Dalam</string>
     <string name="dokter">dr. Reza Mahdi, Sp. PD</string>
     <string name="debitur">BPJS</string>
     <string name="waktu">Selasa, 30 November 2020</string>
@@ -38,5 +38,39 @@
         <item>An.</item>
         <item>By.</item>
     </string-array>
-
+    <string name="title_antrian">Antrian Anda</string>
+    <string name="title_waktu">Waktu</string>
+    <string name="jam">07:08:33</string>
+    <string name="title_poliklinik">Poliklinik</string>
+    <string name="title_debitur">Debitur</string>
+    <string name="antrian_anda">Antrian anda</string>
+    <string name="antrian_saat_ini">Antrian saat ini</string>
+    <string name="nomor_saat_ini">D3</string>
+    <string name="nomor_anda">D7</string>
+    <string name="pilih_poliklinik">Pilih Poliklinik</string>
+    <string name="title_jadwal_dokter">Jadwal Dokter</string>
+    <string name="hari">Senin</string>
+    <string name="range_jam">(07.00 - 12.00)</string>
+    <string name="jenis_operasi">HERNIA</string>
+    <string name="daftar_poliklinik">Daftar Poliklinik</string>
+    <string name="title_daftar">Lengkapi data dibawah ini</string>
+    <string-array name="cara_datang">
+        <item>- Pilih Cara Datang -</item>
+        <item>Datang Sendiri</item>
+        <item>Puskesmas</item>
+        <item>Klinik</item>
+        <item>Rumah Sakit Lain</item>
+    </string-array>
+    <string-array name="dokter_tujuan">
+        <item>- Pilih Dokter -</item>
+        <item>dr. Reza Mahdi, Sp. PD</item>
+        <item>dr. Sopyan, Sp. PD</item>
+    </string-array>
+    <string-array name="pilih_debitur">
+        <item>- Pilih Debitur -</item>
+        <item>UMUM</item>
+        <item>BPJS</item>
+        <item>Prudential</item>
+        <item>AXA</item>
+    </string-array>
 </resources>
