@@ -146,6 +146,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="30dp"
                     android:layout_marginEnd="30dp"
+                    android:layout_marginBottom="80dp"
                     android:ems="10"
                     android:hint="Nomer Rujukan"
                     android:inputType="number"
