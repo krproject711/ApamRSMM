@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="380dp"
+        android:adjustViewBounds="false"
+        android:background="#376EB6"
+        android:scaleType="fitCenter"
+        tools:ignore="MissingConstraints"
+        tools:viewBindingIgnore="true" />
+
+    <ImageView
+        android:id="@+id/eclipse"
+        android:layout_width="120dp"
+        android:layout_height="103dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/eclipse"
+        tools:ignore="MissingConstraints"
+        tools:viewBindingIgnore="true" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:viewBindingIgnore="true">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:orientation="horizontal"
+            tools:viewBindingIgnore="true">
+
+            <ImageButton
+                android:id="@+id/btn_back"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:backgroundTint="@android:color/transparent"
+                app:srcCompat="@drawable/ic_baseline_arrow_back_24"
+                android:contentDescription="@string/txt_kembali" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/txt_form_pendaftaran"
+                android:fontFamily="@font/poppins_medium"
+                android:padding="10dp"
+                android:textColor="#FFFFFF"
+                android:textSize="22sp"
+                android:gravity="center_vertical"/>
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/form">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="30dp"
+                    android:layout_marginBottom="20dp"
+                    android:padding="10dp"
+                    android:text="@string/title_daftar"
+                    android:fontFamily="@font/poppins_medium"
+                    android:textColor="#000000"
+                    android:textAlignment="center"
+                    android:textSize="22sp" />
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/til_spinner"
+                            style="@style/TextInputLayoutStyle1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="30dp"
+                            android:layout_marginEnd="30dp"
+                            android:layout_marginTop="10dp"
+                            app:endIconMode="dropdown_menu"
+                            android:layout_gravity="center_vertical">
+
+                            <AutoCompleteTextView
+                                android:id="@+id/tie_spinner_poliklinik"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:hint="@string/title_poliklinik"
+                                android:inputType="none" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/til_tanggal"
+                            app:boxBackgroundColor="@android:color/transparent"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="30dp"
+                            android:layout_marginEnd="30dp"
+                            android:hint="@string/txt_tanggal"
+                            android:layout_gravity="center_vertical">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/tie_form_tanggal"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:inputType="date" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/til_spinner_cara_dtg"
+                            style="@style/TextInputLayoutStyle1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginStart="30dp"
+                            android:layout_marginEnd="30dp"
+                            app:endIconMode="dropdown_menu"
+                            android:layout_gravity="center_vertical">
+
+                            <AutoCompleteTextView
+                                android:id="@+id/tie_spinner_cara_dtg"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:hint="@string/txt_cara_datang"
+                                android:inputType="none"/>
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/til_spinner_dokter"
+                            style="@style/TextInputLayoutStyle1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginStart="30dp"
+                            android:layout_marginEnd="30dp"
+                            app:endIconMode="dropdown_menu"
+                            android:layout_gravity="center_vertical">
+
+                            <AutoCompleteTextView
+                                android:id="@+id/tie_spinner_dokter"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:hint="@string/txt_pilih_dokter"
+                                android:inputType="none"/>
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/til_spinner_debitur"
+                            style="@style/TextInputLayoutStyle1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginStart="30dp"
+                            android:layout_marginEnd="30dp"
+                            app:endIconMode="dropdown_menu"
+                            android:layout_gravity="center_vertical">
+
+                            <AutoCompleteTextView
+                                android:id="@+id/tie_spinner_debitur"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:hint="@string/txt_pilih_debitur"
+                                android:inputType="none"/>
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/til_nomor_kartu"
+                            app:boxBackgroundColor="@android:color/transparent"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="30dp"
+                            android:layout_marginEnd="30dp"
+                            android:hint="@string/txt_nomor_kartu"
+                            android:layout_gravity="center_vertical">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/tie_nomor_kartu"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:inputType="text" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/til_nomor_rujukan"
+                            app:boxBackgroundColor="@android:color/transparent"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="30dp"
+                            android:layout_marginEnd="30dp"
+                            android:hint="@string/txt_nomor_rujukan"
+                            android:layout_gravity="center_vertical">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/tie_nomor_rujukan"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:inputType="text" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                    </LinearLayout>
+
+                </ScrollView>
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_daftar_poliklinik"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_gravity="bottom"
+                android:backgroundTint="#EB3B65"
+                android:text="@string/txt_daftar"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp" />
+
+        </FrameLayout>
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

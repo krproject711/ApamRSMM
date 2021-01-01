@@ -3,153 +3,289 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".RegisterActivity">
+    android:layout_height="match_parent">
 
-    <RelativeLayout
+    <View
         android:id="@+id/bgLayout"
         android:layout_width="0dp"
-        android:layout_height="220dp"
+        android:layout_height="150dp"
         android:background="@drawable/top_background"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="-76dp">
-
-    </RelativeLayout>
-
-    <ImageView
-        android:id="@+id/back"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
-        android:scaleX="2"
-        android:scaleY="2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_baseline_arrow_back_24"
-        tools:ignore="MissingConstraints" />
+        tools:layout_editor_absoluteY="-76dp"/>
+
+    <ImageButton
+        android:id="@+id/btn_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_baseline_arrow_back_24"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:contentDescription="@string/txt_back_detail" />
+
+<!--    <ImageView-->
+<!--        android:id="@+id/back"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginStart="20dp"-->
+<!--        android:layout_marginTop="20dp"-->
+<!--        android:scaleX="2"-->
+<!--        android:scaleY="2"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:srcCompat="@drawable/ic_baseline_arrow_back_24"-->
+<!--        tools:ignore="MissingConstraints" />-->
+
+    <!--        <EditText-->
+<!--            android:id="@+id/nik"-->
+<!--            android:layout_width="300dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginBottom="20dp"-->
+<!--            android:fontFamily="sans-serif"-->
+<!--            android:hint="NIK"-->
+<!--            android:inputType="number|textEmailAddress"-->
+<!--            android:textColorHighlight="#3F51B5"-->
+<!--            android:textColorLink="#3F51B5"-->
+<!--            android:textSize="24sp" />-->
+
+<!--        <LinearLayout-->
+<!--            android:layout_width="297dp"-->
+<!--            android:layout_height="52dp"-->
+<!--            android:layout_marginBottom="20dp"-->
+<!--            android:orientation="horizontal">-->
+
+<!--            <Spinner-->
+<!--                android:id="@+id/jenis_kelamin"-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:layout_weight="1"-->
+<!--                android:entries="@array/jenis_kelamin" />-->
+
+<!--            <EditText-->
+<!--                android:id="@+id/nama_lengkap"-->
+<!--                android:layout_width="210dp"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:fontFamily="sans-serif"-->
+<!--                android:hint="Nama Lengkap"-->
+<!--                android:inputType="textEmailAddress"-->
+<!--                android:textColorHighlight="#3F51B5"-->
+<!--                android:textColorLink="#3F51B5"-->
+<!--                android:textSize="24sp" />-->
+<!--        </LinearLayout>-->
+
+<!--        <EditText-->
+<!--            android:id="@+id/no_hp"-->
+<!--            android:layout_width="300dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginBottom="20dp"-->
+<!--            android:fontFamily="sans-serif"-->
+<!--            android:hint="Nomor Handphone"-->
+<!--            android:inputType="textEmailAddress"-->
+<!--            android:textColorHighlight="#3F51B5"-->
+<!--            android:textColorLink="#3F51B5"-->
+<!--            android:textSize="24sp" />-->
+
+<!--        <EditText-->
+<!--            android:id="@+id/email"-->
+<!--            android:layout_width="300dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginBottom="20dp"-->
+<!--            android:ems="10"-->
+<!--            android:fontFamily="sans-serif"-->
+<!--            android:hint="Email"-->
+<!--            android:inputType="textEmailAddress"-->
+<!--            android:textColorHighlight="#3F51B5"-->
+<!--            android:textColorLink="#3F51B5"-->
+<!--            android:textSize="24sp" />-->
+
+<!--        <EditText-->
+<!--            android:id="@+id/password"-->
+<!--            android:layout_width="300dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:ems="10"-->
+<!--            android:hint="Password"-->
+<!--            android:inputType="textPassword"-->
+<!--            android:textSize="24sp" />-->
+<!--    </LinearLayout>-->
+
+    <TextView
+        android:id="@+id/tv_greeting"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="160dp"
+        android:fontFamily="@font/poppins_medium"
+        android:text="@string/title_register"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="22sp"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="0dp" />
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="598dp"
+        android:id="@+id/linear3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:gravity="center"
         android:orientation="vertical"
-        app:layout_constraintBottom_toTopOf="@+id/login"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/bgLayout">
+        app:layout_constraintBottom_toTopOf="@id/btn_register"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_greeting"
+        app:layout_constraintVertical_bias="0.0">
 
-        <TextView
-            android:id="@+id/greeting"
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_nik"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="50dp"
-            android:fontFamily="sans-serif-medium"
-            android:text="@string/title_register"
-            android:textAlignment="center"
-            android:textColor="#000000"
-            android:textSize="30sp" />
+            android:layout_marginTop="30dp"
+            app:boxBackgroundColor="@android:color/transparent"
+            android:hint="@string/txt_nik">
 
-        <EditText
-            android:id="@+id/nik"
-            android:layout_width="300dp"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="20dp"
-            android:fontFamily="sans-serif"
-            android:hint="NIK"
-            android:inputType="number|textEmailAddress"
-            android:textColorHighlight="#3F51B5"
-            android:textColorLink="#3F51B5"
-            android:textSize="24sp" />
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/tie_nik"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number" />
+
+        </com.google.android.material.textfield.TextInputLayout>
 
         <LinearLayout
-            android:layout_width="297dp"
-            android:layout_height="52dp"
-            android:layout_marginBottom="20dp"
-            android:orientation="horizontal">
+            android:id="@+id/linear4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/greeting">
 
-            <Spinner
-                android:id="@+id/jenis_kelamin"
-                android:layout_width="0dp"
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_spinner"
+                style="@style/TextInputLayoutStyle1"
+                android:layout_width="85dp"
                 android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:entries="@array/jenis_kelamin" />
+                app:endIconMode="dropdown_menu"
+                android:layout_gravity="center_vertical">
 
-            <EditText
-                android:id="@+id/nama_lengkap"
-                android:layout_width="210dp"
+                <AutoCompleteTextView
+                    android:id="@+id/tie_spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/txt_tuan"
+                    android:textSize="10sp"
+                    android:inputType="none"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_nama"
+                app:boxBackgroundColor="@android:color/transparent"
+                android:layout_width="215dp"
                 android:layout_height="wrap_content"
-                android:fontFamily="sans-serif"
-                android:hint="Nama Lengkap"
-                android:inputType="textEmailAddress"
-                android:textColorHighlight="#3F51B5"
-                android:textColorLink="#3F51B5"
-                android:textSize="24sp" />
+                android:layout_marginStart="5dp"
+                android:hint="@string/txt_nama">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tie_nama"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
         </LinearLayout>
 
-        <EditText
-            android:id="@+id/no_hp"
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_no_hp"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="20dp"
-            android:fontFamily="sans-serif"
-            android:hint="Nomor Handphone"
-            android:inputType="textEmailAddress"
-            android:textColorHighlight="#3F51B5"
-            android:textColorLink="#3F51B5"
-            android:textSize="24sp" />
+            app:boxBackgroundColor="@android:color/transparent"
+            android:layout_marginTop="10dp"
+            android:hint="@string/txt_np_hp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/greeting">
 
-        <EditText
-            android:id="@+id/email"
-            android:layout_width="300dp"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="20dp"
-            android:ems="10"
-            android:fontFamily="sans-serif"
-            android:hint="Email"
-            android:inputType="textEmailAddress"
-            android:textColorHighlight="#3F51B5"
-            android:textColorLink="#3F51B5"
-            android:textSize="24sp" />
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/tie_no_hp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="phone" />
 
-        <EditText
-            android:id="@+id/password"
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_reg_email"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="Password"
-            android:inputType="textPassword"
-            android:textSize="24sp" />
+            app:boxBackgroundColor="@android:color/transparent"
+            android:layout_marginTop="10dp"
+            android:hint="@string/prompt_email"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/greeting">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/tie_reg_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_reg_password"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            app:boxBackgroundColor="@android:color/transparent"
+            android:layout_marginTop="10dp"
+            android:hint="@string/prompt_password"
+            android:enabled="true"
+            app:counterMaxLength="8"
+            app:endIconMode="password_toggle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/greeting">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/tie_reg_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
     </LinearLayout>
 
     <Button
-        android:id="@+id/login"
+        android:id="@+id/btn_register"
         android:layout_width="0dp"
         android:layout_height="70dp"
         android:backgroundTint="#EB3B65"
-        android:text="DAFTAR"
+        android:text="@string/txt_register"
         android:textColor="#FFFFFF"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"/>
 
     <ProgressBar
-        android:id="@+id/loading"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/pb_reg_loading"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
         android:layout_gravity="center"
         android:layout_marginStart="32dp"
         android:layout_marginTop="64dp"
         android:layout_marginEnd="32dp"
         android:layout_marginBottom="64dp"
         android:visibility="gone"
+        android:progress="80"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/password"
-        app:layout_constraintStart_toStartOf="@+id/password"
+        app:layout_constraintEnd_toEndOf="@+id/linear3"
+        app:layout_constraintStart_toStartOf="@+id/linear3"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.3" />
 

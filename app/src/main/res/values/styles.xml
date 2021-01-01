@@ -20,4 +20,22 @@
         <item name="android:background">@drawable/rounded_shape</item>
     </style>
 
+    <style name="AppTheme.RoundedCornerMaterialButton1" parent="Widget.AppCompat.Button.Colored">
+        <item name="android:background">@drawable/button_border</item>
+    </style>
+
+    <style name="MaterialScreen" parent="Theme.MaterialComponents"/>
+
+    <style name="TextInputLayoutStyle" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+        <item name="boxStrokeColor">#376EB6</item>
+<!--        <item name="boxStrokeWidth">2dp</item>-->
+        <item name="hintTextColor">#000</item>
+    </style>
+
+    <style name="TextInputLayoutStyle1" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
+        <item name="boxStrokeColor">#fff</item>
+        <item name="boxStrokeWidth">2dp</item>
+        <item name="hintTextColor">#000</item>
+    </style>
+
 </resources>

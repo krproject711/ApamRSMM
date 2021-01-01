@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_dashboard"
+    app:startDestination="@id/berandaFragment">
+
+    <fragment
+        android:id="@+id/poliklinikFragment"
+        android:name="com.krproject.apamproject.ui.dashboard.PoliklinikFragment"
+        android:label="PoliklinikFragment" />
+    <fragment
+        android:id="@+id/berandaFragment"
+        android:name="com.krproject.apamproject.ui.dashboard.BerandaFragment"
+        android:label="BerandaFragment" />
+    <fragment
+        android:id="@+id/antrianFragment"
+        android:name="com.krproject.apamproject.ui.dashboard.AntrianFragment"
+        android:label="AntrianFragment" />
+</navigation>
