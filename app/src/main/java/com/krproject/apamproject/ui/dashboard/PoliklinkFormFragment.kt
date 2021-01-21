@@ -10,13 +10,12 @@ import androidx.core.widget.addTextChangedListener
 import androidx.navigation.fragment.findNavController
 import com.krproject.apamproject.R
 import com.krproject.apamproject.data.network.AuthApi
-import com.krproject.apamproject.data.repository.AuthRepository
 import com.krproject.apamproject.databinding.FragmentPoliklinkFormBinding
 import com.krproject.apamproject.ui.auth.AuthViewModel
 import com.krproject.apamproject.ui.base.BaseFragment
 import com.krproject.apamproject.ui.visible
 
-class PoliklinkFormFragment : BaseFragment<AuthViewModel, FragmentPoliklinkFormBinding, AuthRepository>() {
+class PoliklinkFormFragment : BaseFragment<FragmentPoliklinkFormBinding>() {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
@@ -57,14 +56,10 @@ class PoliklinkFormFragment : BaseFragment<AuthViewModel, FragmentPoliklinkFormB
         }
     }
 
-    override fun getViewModel() = AuthViewModel::class.java
-
     override fun getFragmentBinding(
         inflater: LayoutInflater,
         container: ViewGroup?
     ) = FragmentPoliklinkFormBinding.inflate(inflater, container, false)
 
-    override fun getFragmentRepository() =
-        AuthRepository(remoteDataSource.buildApi(AuthApi::class.java), userPreferences)
 }
 

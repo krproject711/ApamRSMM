@@ -5,14 +5,11 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import com.krproject.apamproject.R
-import com.krproject.apamproject.data.network.AuthApi
-import com.krproject.apamproject.data.repository.AuthRepository
 import com.krproject.apamproject.databinding.FragmentBerandaBinding
-import com.krproject.apamproject.ui.auth.AuthViewModel
 import com.krproject.apamproject.ui.base.BaseFragment
 import com.synnapps.carouselview.ImageListener
 
-class BerandaFragment : BaseFragment<AuthViewModel, FragmentBerandaBinding, AuthRepository>() {
+class BerandaFragment : BaseFragment<FragmentBerandaBinding>() {
 
     private val imageList = intArrayOf(
         R.drawable.car_covid19,
@@ -51,13 +48,8 @@ class BerandaFragment : BaseFragment<AuthViewModel, FragmentBerandaBinding, Auth
         binding.imageSlider.pageCount = imageList.size
     }
 
-    override fun getViewModel() = AuthViewModel::class.java
-
     override fun getFragmentBinding(
         inflater: LayoutInflater,
         container: ViewGroup?
     ) = FragmentBerandaBinding.inflate(inflater, container, false)
-
-    override fun getFragmentRepository() =
-        AuthRepository(remoteDataSource.buildApi(AuthApi::class.java), userPreferences)
 }

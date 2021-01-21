@@ -7,11 +7,10 @@ import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import com.krproject.apamproject.R
 import com.krproject.apamproject.data.network.AuthApi
-import com.krproject.apamproject.data.repository.AuthRepository
 import com.krproject.apamproject.databinding.FragmentWelcomeBinding
 import com.krproject.apamproject.ui.base.BaseFragment
 
-class WelcomeFragment : BaseFragment<AuthViewModel, FragmentWelcomeBinding, AuthRepository>() {
+class WelcomeFragment : BaseFragment<FragmentWelcomeBinding>() {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
@@ -29,13 +28,8 @@ class WelcomeFragment : BaseFragment<AuthViewModel, FragmentWelcomeBinding, Auth
         }
     }
 
-    override fun getViewModel() = AuthViewModel::class.java
-
     override fun getFragmentBinding(
         inflater: LayoutInflater,
         container: ViewGroup?
     ) = FragmentWelcomeBinding.inflate(inflater, container, false)
-
-    override fun getFragmentRepository() =
-        AuthRepository(remoteDataSource.buildApi(AuthApi::class.java), userPreferences)
 }

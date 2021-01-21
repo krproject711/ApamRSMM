@@ -16,9 +16,10 @@
         android:label="RSMM Indramayu"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
+        android:networkSecurityConfig="@xml/network_security_config"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true"
-        tools:targetApi="m"
+        android:name=".ui.base.MyApplication"
         tools:replace="android:label">
         <activity android:name="com.krproject.apamproject.MainActivity2"/>
         <activity android:name="com.krproject.apamproject.ui.auth.AuthActivity"
@@ -52,6 +53,8 @@
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
+
+        <uses-library android:name="org.apache.http.legacy" android:required="false"/>
     </application>
 
 </manifest>

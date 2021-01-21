@@ -2,6 +2,7 @@ package com.krproject.apamproject.data.network
 
 import com.krproject.apamproject.data.response.DefaultResponse
 import com.krproject.apamproject.data.response.LoginResponse
+import retrofit2.Response
 import retrofit2.http.Field
 import retrofit2.http.FormUrlEncoded
 import retrofit2.http.GET
@@ -22,9 +23,9 @@ interface AuthApi {
 
     //Method untuk login user
     @FormUrlEncoded
-    @GET("registrasi")
-    fun userLogin(
-        email: String,
-        password: String
-    ): LoginResponse
+    @POST("login")
+    suspend fun userLogin(
+        @Field("email") email:String,
+        @Field("password") password:String,
+    ): Response<LoginResponse>
 }

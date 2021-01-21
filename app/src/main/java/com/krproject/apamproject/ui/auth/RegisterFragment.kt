@@ -10,13 +10,12 @@ import androidx.core.widget.addTextChangedListener
 import androidx.navigation.fragment.findNavController
 import com.krproject.apamproject.R
 import com.krproject.apamproject.data.network.AuthApi
-import com.krproject.apamproject.data.repository.AuthRepository
 import com.krproject.apamproject.databinding.FragmentRegisterBinding
 import com.krproject.apamproject.ui.base.BaseFragment
 import com.krproject.apamproject.ui.enable
 import com.krproject.apamproject.ui.visible
 
-class RegisterFragment : BaseFragment<AuthViewModel, FragmentRegisterBinding, AuthRepository>() {
+class RegisterFragment : BaseFragment<FragmentRegisterBinding>() {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
@@ -77,13 +76,9 @@ class RegisterFragment : BaseFragment<AuthViewModel, FragmentRegisterBinding, Au
 
     }
 
-    override fun getViewModel() = AuthViewModel::class.java
 
     override fun getFragmentBinding(
         inflater: LayoutInflater,
         container: ViewGroup?
     ) = FragmentRegisterBinding.inflate(inflater, container, false)
-
-    override fun getFragmentRepository()=
-        AuthRepository(remoteDataSource.buildApi(AuthApi::class.java), userPreferences)
 }

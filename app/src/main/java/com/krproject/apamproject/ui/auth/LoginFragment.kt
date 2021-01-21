@@ -1,51 +1,71 @@
 package com.krproject.apamproject.ui.auth
 
+import android.os.Build
 import android.os.Bundle
+import android.os.StrictMode
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.core.widget.addTextChangedListener
 import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import com.krproject.apamproject.R
-import com.krproject.apamproject.data.network.AuthApi
 import com.krproject.apamproject.data.network.RemoteDataSource
+import com.krproject.apamproject.data.network.RequestBodies
 import com.krproject.apamproject.data.network.Resource
-import com.krproject.apamproject.data.repository.AuthRepository
 import com.krproject.apamproject.databinding.FragmentLoginBinding
-
+import com.krproject.apamproject.repository.AppRepository
 import com.krproject.apamproject.ui.base.BaseFragment
-import com.krproject.apamproject.ui.dashboard.BerandaActivity
+import com.krproject.apamproject.ui.base.ViewModelProviderFactory
 import com.krproject.apamproject.ui.enable
-import com.krproject.apamproject.ui.startNewActivity
 import com.krproject.apamproject.ui.visible
 
-class LoginFragment : BaseFragment<AuthViewModel, FragmentLoginBinding, AuthRepository>() {
+
+class LoginFragment : BaseFragment<FragmentLoginBinding>() {
+
+    lateinit var authViewModel: AuthViewModel
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
 
+        init()
         binding.pbLoading.visible(false)
         binding.btnLogin.enable(false)
 
-        viewModel.loginResponse.observe(viewLifecycleOwner, Observer {
-            binding.pbLoading.visible(false)
-            when (it) {
-                is Resource.Success -> {
-//                        viewModel.saveAuthToken(it.value.user.access_token)
-                        requireActivity().startNewActivity(BerandaActivity::class.java)
-                }
-                is Resource.Failure -> {
-                    Toast.makeText(requireContext(), "Login Failure", Toast.LENGTH_SHORT).show()
+        authViewModel.loginResponse.observe(viewLifecycleOwner, Observer { event ->
+            event.getContentIfNotHandled()?.let { response ->
+                when (response) {
+                    is Resource.Success -> {
+                        hideProgressBar()
+                        response.data?.let { loginResponse ->
+                            findNavController().navigate(LoginFragmentDirections.actionLoginFragmentToBerandaFragment3())
+                        }
+                    }
+
+                    is Resource.Error -> {
+                        hideProgressBar()
+                        response.message?.let { message ->
+                            Toast.makeText(requireContext(), message, Toast.LENGTH_SHORT).show()
+                            println("Error $message" )
+                        }
+
+                    }
+
+                    is Resource.Loading -> {
+                        showProgressLoading()
+                    }
                 }
             }
         })
 
         binding.tiePassword.addTextChangedListener {
             val email = binding.tieEmail.text.toString().trim()
-            binding.btnLogin.enable(email.isNotEmpty() &&
-                    it.toString().isNotEmpty() &&
-            it.toString().length > 7)
+            binding.btnLogin.enable(
+                email.isNotEmpty() &&
+                        it.toString().isNotEmpty() &&
+                        it.toString().length >= 7
+            )
         }
 
         binding.btnLogin.setOnClickListener {
@@ -53,8 +73,8 @@ class LoginFragment : BaseFragment<AuthViewModel, FragmentLoginBinding, AuthRepo
             val email = binding.tieEmail.text.toString().trim()
             val password = binding.tiePassword.text.toString().trim()
             binding.pbLoading.visible(true)
-            findNavController().navigate(R.id.action_loginFragment_to_berandaFragment3)
-//            viewModel.login(email, password)
+//            findNavController().navigate(R.id.action_loginFragment_to_berandaFragment3)
+            authViewModel.loginUser(RequestBodies.LoginBody(email, password))
         }
 
         binding.btnBack.setOnClickListener {
@@ -62,15 +82,27 @@ class LoginFragment : BaseFragment<AuthViewModel, FragmentLoginBinding, AuthRepo
         }
     }
 
-    override fun getViewModel() = AuthViewModel::class.java
+    private fun hideProgressBar() {
+        binding.pbLoading.visible(false)
+    }
+
+    private fun showProgressLoading() {
+        binding.pbLoading.visible(true)
+    }
+
 
     override fun getFragmentBinding(
         inflater: LayoutInflater,
         container: ViewGroup?
     ) = FragmentLoginBinding.inflate(inflater, container, false)
 
-    override fun getFragmentRepository() =
-        AuthRepository(remoteDataSource.buildApi(AuthApi::class.java), userPreferences)
+    private fun init() {
+        val policy = StrictMode.ThreadPolicy.Builder().permitAll().build()
+        StrictMode.setThreadPolicy(policy)
+        val repository = AppRepository()
+        val factory = ViewModelProviderFactory(requireActivity().application, repository)
+        authViewModel = ViewModelProvider(this, factory).get(AuthViewModel::class.java)
+    }
 
 }
 
