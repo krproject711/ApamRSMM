@@ -9,15 +9,20 @@ import com.krproject.apamproject.R
 import com.krproject.apamproject.data.network.AuthApi
 import com.krproject.apamproject.databinding.FragmentWelcomeBinding
 import com.krproject.apamproject.ui.base.BaseFragment
+import com.krproject.apamproject.util.SharedPreferenceHelper
 
 class WelcomeFragment : BaseFragment<FragmentWelcomeBinding>() {
 
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
-    }
+    lateinit var sharedPreferenceHelper: SharedPreferenceHelper
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        sharedPreferenceHelper = SharedPreferenceHelper(requireContext())
+
+        if (!sharedPreferenceHelper.getToken().isNullOrEmpty()){
+            findNavController().navigate(R.id.action_welcomeFragment_to_berandaFragment)
+        }
 
         binding.masukButton.setOnClickListener{
             findNavController().navigate(R.id.action_welcomeFragment_to_loginFragment)

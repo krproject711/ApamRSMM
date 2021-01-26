@@ -1,5 +1,6 @@
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
 apply plugin: 'dagger.hilt.android.plugin'
 apply plugin: 'kotlin-kapt'
 apply plugin: 'androidx.navigation.safeargs'
@@ -36,6 +37,9 @@ android {
         viewBinding true
     }
 }
+
+def retrofitVersion = '2.7.1'
+def rxJavaVersion = '2.1.1'
 
 dependencies {
     def room_version = "2.2.6"
@@ -96,6 +100,11 @@ dependencies {
 
     //Data Store Preferences
     implementation "androidx.datastore:datastore-preferences:1.0.0-alpha05"
+
+    implementation "com.squareup.retrofit2:adapter-rxjava2:$retrofitVersion"
+
+    implementation "io.reactivex.rxjava2:rxandroid:$rxJavaVersion"
+    implementation "io.reactivex.rxjava2:rxjava:$rxJavaVersion"
 
 
 }

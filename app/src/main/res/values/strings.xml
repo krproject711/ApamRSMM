@@ -89,6 +89,7 @@
     <string name="txt_logo_rsmm">Logo RSMM</string>
     <string name="network_failure">Gagal Mengambil Data</string>
     <string name="conversion_error">Conversion Error</string>
+    <string name="title_jadwal_operasi">Jadwal Operasi</string>
     <string-array name="cara_datang">
         <item>- Pilih Cara Datang -</item>
         <item>Datang Sendiri</item>

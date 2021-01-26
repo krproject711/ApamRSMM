@@ -10,7 +10,7 @@ import android.widget.ImageView
 
 class SplashScreen : AppCompatActivity() {
     // Durasi Splash Screen
-    private val SPLASH_TIME: Long = 4000
+    private val SPLASH_TIME: Long = 2000
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -27,7 +27,11 @@ class SplashScreen : AppCompatActivity() {
         // Intent to Main Activity
         Handler(Looper.getMainLooper()).postDelayed({
             val intent = Intent(this, MainActivity2::class.java)
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK)
+            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
             startActivity(intent)
+            finish()
         }, SPLASH_TIME)
     }
 }

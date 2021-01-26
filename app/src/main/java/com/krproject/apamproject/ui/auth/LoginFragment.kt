@@ -20,11 +20,13 @@ import com.krproject.apamproject.ui.base.BaseFragment
 import com.krproject.apamproject.ui.base.ViewModelProviderFactory
 import com.krproject.apamproject.ui.enable
 import com.krproject.apamproject.ui.visible
+import com.krproject.apamproject.util.SharedPreferenceHelper
 
 
 class LoginFragment : BaseFragment<FragmentLoginBinding>() {
 
     lateinit var authViewModel: AuthViewModel
+    lateinit var sharedPreferenceHelper: SharedPreferenceHelper
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
@@ -39,6 +41,8 @@ class LoginFragment : BaseFragment<FragmentLoginBinding>() {
                     is Resource.Success -> {
                         hideProgressBar()
                         response.data?.let { loginResponse ->
+                            sharedPreferenceHelper.setToken(loginResponse.body.apiToken)
+                            sharedPreferenceHelper.setEmail(binding.tieEmail.text.toString().trim())
                             findNavController().navigate(LoginFragmentDirections.actionLoginFragmentToBerandaFragment3())
                         }
                     }
@@ -78,7 +82,7 @@ class LoginFragment : BaseFragment<FragmentLoginBinding>() {
         }
 
         binding.btnBack.setOnClickListener {
-            findNavController().navigate(LoginFragmentDirections.actionLoginFragmentToWelcomeFragment())
+           requireActivity().onBackPressed()
         }
     }
 
@@ -97,6 +101,7 @@ class LoginFragment : BaseFragment<FragmentLoginBinding>() {
     ) = FragmentLoginBinding.inflate(inflater, container, false)
 
     private fun init() {
+        sharedPreferenceHelper = SharedPreferenceHelper(requireContext())
         val policy = StrictMode.ThreadPolicy.Builder().permitAll().build()
         StrictMode.setThreadPolicy(policy)
         val repository = AppRepository()

@@ -1,6 +1,6 @@
 <resources>
     <!-- Base application theme. -->
-    <style name="AppTheme"  parent="Theme.AppCompat.Light.NoActionBar">
+    <style name="AppTheme"  parent="Theme.MaterialComponents.Light.NoActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
@@ -33,8 +33,8 @@
     </style>
 
     <style name="TextInputLayoutStyle1" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
-        <item name="boxStrokeColor">#fff</item>
-        <item name="boxStrokeWidth">2dp</item>
+        <item name="boxStrokeColor">#3F51B5</item>
+        <item name="boxStrokeWidth">4dp</item>
         <item name="hintTextColor">#000</item>
     </style>
 
