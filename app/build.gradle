@@ -25,6 +25,21 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+
+    flavorDimensions "variant"
+
+    productFlavors {
+        dev {
+            dimension 'variant'
+            buildConfigField "String", "BASE_URL", "\"http://izeber.xyz/index.php/api/\""
+        }
+
+        prod {
+            dimension 'variant'
+            buildConfigField "String", "BASE_URL", "\"http://192.168.0.6\""
+        }
+    }
+
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8

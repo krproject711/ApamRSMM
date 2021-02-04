@@ -42,6 +42,7 @@ class LoginFragment : BaseFragment<FragmentLoginBinding>() {
                         hideProgressBar()
                         response.data?.let { loginResponse ->
                             sharedPreferenceHelper.setToken(loginResponse.body.apiToken)
+                            sharedPreferenceHelper.setNoRm(loginResponse.body.no_rm_pas)
                             sharedPreferenceHelper.setEmail(binding.tieEmail.text.toString().trim())
                             findNavController().navigate(LoginFragmentDirections.actionLoginFragmentToBerandaFragment3())
                         }

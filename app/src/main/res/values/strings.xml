@@ -90,6 +90,7 @@
     <string name="network_failure">Gagal Mengambil Data</string>
     <string name="conversion_error">Conversion Error</string>
     <string name="title_jadwal_operasi">Jadwal Operasi</string>
+    <string name="bpjs">BPJS</string>
     <string-array name="cara_datang">
         <item>- Pilih Cara Datang -</item>
         <item>Datang Sendiri</item>
@@ -103,6 +104,7 @@
         <item>dr. Sopyan, Sp. PD</item>
     </string-array>
     <string-array name="pilih_debitur">
+        <item>Pilih Jenis Debitur</item>
         <item>UMUM</item>
         <item>BPJS</item>
     </string-array>

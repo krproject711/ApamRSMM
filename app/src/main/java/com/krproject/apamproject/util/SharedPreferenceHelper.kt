@@ -29,6 +29,14 @@ class SharedPreferenceHelper(context: Context) {
 
     fun getEmail() = sharedPreferences.getString(EMAIL, "")
 
+    fun setNoRm(noRm: String){
+        editor.putString(NO_RM, noRm).apply()
+    }
+
+    fun getNoRm() = sharedPreferences.getString(NO_RM, "")
+
+
+
     fun clearAllDataShared(){
         editor.clear().apply()
     }
@@ -36,6 +44,7 @@ class SharedPreferenceHelper(context: Context) {
     companion object{
         const val TOKEN = "token"
         const val EMAIL = "email"
+        const val NO_RM = "no_rm"
 
     }
 }

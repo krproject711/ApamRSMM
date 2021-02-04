@@ -1,54 +1,316 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".ui.dashboard.HistoryFragment">
 
-    <LinearLayout
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="#376EB6"
-        android:orientation="vertical">
+        android:layout_height="match_parent">
 
-        <LinearLayout
+        <androidx.appcompat.widget.AppCompatImageView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="20dp"
-            android:orientation="horizontal"
-            tools:viewBindingIgnore="true">
+            android:layout_height="450dp"
+            android:background="@color/colorPrimary" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
             <ImageButton
                 android:id="@+id/btn_back"
                 android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_marginStart="-10dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
                 android:backgroundTint="@android:color/transparent"
-                android:src="@drawable/ic_baseline_arrow_back_24"
-                android:contentDescription="@string/txt_kembali" />
+                android:contentDescription="@string/txt_kembali"
+                android:src="@drawable/ic_baseline_arrow_back_24" />
 
             <TextView
                 android:id="@+id/antrian_tittle"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toEndOf="@id/btn_back"
+                app:layout_constraintTop_toTopOf="@id/btn_back"
+                app:layout_constraintBottom_toBottomOf="@id/btn_back"
+                android:fontFamily="@font/montserrat_semibold"
                 android:padding="10dp"
                 android:text="@string/txt_riwayat_antrian"
-                android:fontFamily="@font/montserrat_semibold"
-                android:gravity="center_vertical"
                 android:textColor="#FFFFFF"
                 android:textSize="20sp"
-                tools:viewBindingIgnore="true"/>
+                tools:viewBindingIgnore="true" />
 
-        </LinearLayout>
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rv_history"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            tools:listitem="@layout/history_list"/>
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card"
+                android:layout_width="match_parent"
+                android:layout_height="500dp"
+                app:layout_constraintTop_toBottomOf="@id/btn_back"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:cardCornerRadius="16dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginHorizontal="40dp">
 
-    </LinearLayout>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/img1"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/logo_rsmm_full"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"/>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/txt1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Tanggal Registrasi"
+                        android:layout_marginStart="24dp"
+                        app:layout_constraintTop_toBottomOf="@id/img1"
+                        app:layout_constraintStart_toStartOf="parent"/>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/txtTanggal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="07 November 2020"
+                        android:layout_marginStart="24dp"
+                        android:textStyle="bold"
+                        android:textColor="@android:color/black"
+                        app:layout_constraintTop_toBottomOf="@id/txt1"
+                        app:layout_constraintStart_toStartOf="parent"/>
+
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/txt2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Poliklinik"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginTop="16dp"
+                        app:layout_constraintTop_toBottomOf="@id/txtTanggal"
+                        app:layout_constraintStart_toStartOf="parent"/>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/txtPoliklinik"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Kandungan"
+                        android:layout_marginStart="24dp"
+                        android:textStyle="bold"
+                        android:textColor="@android:color/black"
+                        app:layout_constraintTop_toBottomOf="@id/txt2"
+                        app:layout_constraintStart_toStartOf="parent"/>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/txt3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Metode Pembayaran"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginTop="16dp"
+                        app:layout_constraintTop_toBottomOf="@id/txtPoliklinik"
+                        app:layout_constraintStart_toStartOf="parent"/>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/txtMetode"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Umum (Non Asuransi)"
+                        android:layout_marginStart="24dp"
+                        android:textStyle="bold"
+                        android:textColor="@android:color/black"
+                        app:layout_constraintTop_toBottomOf="@id/txt3"
+                        app:layout_constraintStart_toStartOf="parent"/>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/txt4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Nomor Antrian Anda"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginTop="16dp"
+                        app:layout_constraintTop_toBottomOf="@id/txtMetode"
+                        app:layout_constraintStart_toStartOf="parent"/>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/txtNoAntrian"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="B5"
+                        android:layout_marginStart="24dp"
+                        android:textStyle="bold"
+                        android:textColor="@android:color/black"
+                        app:layout_constraintTop_toBottomOf="@id/txt4"
+                        app:layout_constraintStart_toStartOf="parent"/>
+
+                    <View
+                        android:id="@+id/view"
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:layout_marginTop="16dp"
+                        android:background="@android:color/darker_gray"
+                        app:layout_constraintTop_toBottomOf="@id/txtNoAntrian"/>
+
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/txt5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Antrian saat ini"
+                        android:layout_marginStart="24dp"
+                        android:textStyle="bold"
+                        android:layout_marginTop="16dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:textColor="@android:color/black"
+                        app:layout_constraintTop_toBottomOf="@id/view"
+                        app:layout_constraintStart_toStartOf="parent"/>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/txtAntrianSaatIni"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="B2"
+                        android:layout_marginStart="24dp"
+                        android:textStyle="bold"
+                        android:layout_marginTop="16dp"
+                        android:textSize="50sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:textColor="@android:color/black"
+                        app:layout_constraintTop_toBottomOf="@id/txt5"
+                        app:layout_constraintStart_toStartOf="parent"/>
+
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                app:layout_constraintTop_toBottomOf="@id/card"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:padding="8dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/imageView6"
+                        android:layout_width="80dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="5dp"
+                        android:src="@drawable/ic_baseline_pending_actions_24" />
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tv_dokter"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:text="@string/dokter"
+                            android:fontFamily="@font/poppins_medium"
+                            android:textSize="16sp"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
+
+                        <TextView
+                            android:id="@+id/tv_poliklinik"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/poliklinik"
+                            android:fontFamily="@font/poppins_medium"
+                            android:textSize="14sp"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Small"/>
+
+                        <TextView
+                            android:id="@+id/debitur"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/debitur"
+                            android:fontFamily="@font/poppins_medium"
+                            android:textSize="14sp"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+
+                        <TextView
+                            android:id="@+id/waktu"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/waktu"
+                            android:fontFamily="@font/poppins_medium"
+                            android:textSize="12sp"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </FrameLayout>
+
+
+
+
+    <!--    <LinearLayout-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="match_parent"-->
+    <!--        android:orientation="vertical">-->
+
+    <!--        <LinearLayout-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_margin="20dp"-->
+    <!--            android:orientation="horizontal"-->
+    <!--            tools:viewBindingIgnore="true">-->
+
+    <!--            <ImageButton-->
+    <!--                android:id="@+id/btn_back"-->
+    <!--                android:layout_width="wrap_content"-->
+    <!--                android:layout_height="match_parent"-->
+    <!--                android:layout_marginStart="-10dp"-->
+    <!--                android:backgroundTint="@android:color/transparent"-->
+    <!--                android:src="@drawable/ic_baseline_arrow_back_24"-->
+    <!--                android:contentDescription="@string/txt_kembali" />-->
+
+    <!--            <TextView-->
+    <!--                android:id="@+id/antrian_tittle"-->
+    <!--                android:layout_width="0dp"-->
+    <!--                android:layout_height="match_parent"-->
+    <!--                android:layout_weight="1"-->
+    <!--                android:padding="10dp"-->
+    <!--                android:text="@string/txt_riwayat_antrian"-->
+    <!--                android:fontFamily="@font/montserrat_semibold"-->
+    <!--                android:gravity="center_vertical"-->
+    <!--                android:textColor="#FFFFFF"-->
+    <!--                android:textSize="20sp"-->
+    <!--                tools:viewBindingIgnore="true"/>-->
+
+    <!--        </LinearLayout>-->
+
+    <!--    </LinearLayout>-->
+
+</androidx.core.widget.NestedScrollView>

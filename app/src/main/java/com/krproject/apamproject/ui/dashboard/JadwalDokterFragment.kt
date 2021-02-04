@@ -5,8 +5,7 @@ import android.os.StrictMode
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.SearchView
-import android.widget.Toast
+import android.widget.*
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
@@ -35,6 +34,35 @@ class JadwalDokterFragment : BaseFragment<FragmentJadwalDokterBinding>() {
         init()
         jadwalDokterAdapter = JadwalDokterAdapter()
         getJadwalDokter("")
+
+        //Define Array View
+        val dropdownMenu = listOf(
+            "Ascending",
+            "Descending"
+        )
+
+        val adapter = ArrayAdapter(
+            requireContext(),
+            R.layout.dropdown_menu,
+            dropdownMenu
+        )
+
+        (binding.spinnerHari as? AutoCompleteTextView)?.setAdapter(adapter)
+
+        binding.spinnerHari.onItemSelectedListener = object : AdapterView.OnItemSelectedListener{
+            override fun onItemSelected(
+                parent: AdapterView<*>?,
+                view: View?,
+                position: Int,
+                id: Long
+            ) {
+
+            }
+
+            override fun onNothingSelected(parent: AdapterView<*>?) {
+            }
+
+        }
 
         binding.btnBack.setOnClickListener {
             findNavController().navigate(R.id.action_jadwalDokterFragment_to_berandaFragment3)

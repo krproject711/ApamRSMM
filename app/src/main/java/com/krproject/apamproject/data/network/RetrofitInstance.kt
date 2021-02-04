@@ -1,5 +1,7 @@
 package com.krproject.apamproject.data.network
 
+
+import com.krproject.apamproject.BuildConfig
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
@@ -19,7 +21,7 @@ class RetrofitInstance {
                 .addInterceptor(logging)
                 .build()
             Retrofit.Builder()
-                .baseUrl(RemoteDataSource.BASE_URL)
+                .baseUrl(BuildConfig.BASE_URL)
                 .addConverterFactory(GsonConverterFactory.create())
                 .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
                 .client(client)

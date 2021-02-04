@@ -1,9 +1,11 @@
 package com.krproject.apamproject.ui.auth
 
 import android.os.Bundle
+import android.text.TextUtils
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.AutoCompleteTextView
 import android.widget.Toast
@@ -25,9 +27,15 @@ import com.krproject.apamproject.ui.visible
 class RegisterFragment : BaseFragment<FragmentRegisterBinding>() {
 
     lateinit var authViewModel: AuthViewModel
+    var debitur = ""
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
+
+        val debiturItems = resources.getStringArray(R.array.pilih_debitur)
+
+        val debiturAdapter = ArrayAdapter(requireContext(), R.layout.dropdown_menu, debiturItems)
+        (binding.tieDebitur as? AutoCompleteTextView)?.setAdapter(debiturAdapter)
 
         binding.pbRegLoading.visible(false)
         binding.btnRegister.enable(false)
@@ -53,9 +61,50 @@ class RegisterFragment : BaseFragment<FragmentRegisterBinding>() {
             val nohp = binding.tieNoHp.text.toString().trim()
             val email = binding.tieRegEmail.text.toString().trim()
             val password = binding.tieRegPassword.text.toString().trim()
+            val bpjs = binding.tieBpjs.text.toString().trim()
 
-            binding.pbRegLoading.visible(true)
-            authViewModel.registerUser(RequestBodies.RegisterBody(email, password, name, nohp, nik))
+//            val noBpjs = if (bpjs.isNullOrEmpty()){
+//                "null"
+//            }else{
+//                bpjs
+//            }
+
+
+            if (email.isEmailValid()){
+                if (debitur == ""){
+                    if (binding.tilBpjs.visibility == View.GONE){
+                        binding.pbRegLoading.visible(true)
+                        authViewModel.registerUser(RequestBodies.RegisterBody(email, password, name, nohp, nik, bpjs))
+                    }else{
+                        Toast.makeText(
+                            requireContext(),
+                            "Pilih jenis debitur terlebih dahulu",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                    }
+                }else{
+                    if (binding.tilDebitur.visibility == View.VISIBLE){
+                        if (bpjs.isEmpty()){
+                            Toast.makeText(
+                                requireContext(),
+                                "Masukkan No BPJS Terlebih dahulu",
+                                Toast.LENGTH_SHORT
+                            ).show()
+                        }else{
+                            binding.pbRegLoading.visible(true)
+                            authViewModel.registerUser(RequestBodies.RegisterBody(email, password, name, nohp, nik, bpjs))
+                        }
+                    }else{
+
+                        binding.pbRegLoading.visible(true)
+                        authViewModel.registerUser(RequestBodies.RegisterBody(email, password, name, nohp, nik, "null"))
+                    }
+                }
+            }else{
+                Toast.makeText(requireContext(), "Masukkan Email yang valid", Toast.LENGTH_SHORT)
+                    .show()
+            }
+
 //            findNavController().navigate(R.id.action_registerFragment_to_welcomeFragment)
         }
 
@@ -85,6 +134,25 @@ class RegisterFragment : BaseFragment<FragmentRegisterBinding>() {
                 }
             }
         })
+
+        binding.tieDebitur.onItemClickListener = object : AdapterView.OnItemClickListener{
+            override fun onItemClick(
+                parent: AdapterView<*>?,
+                view: View?,
+                position: Int,
+                id: Long
+            ) {
+                if (position == 2){
+                    binding.tilBpjs.visibility = View.VISIBLE
+                    debitur = binding.tieDebitur.text.toString()
+                }else{
+                    binding.tieBpjs.setText("")
+                    debitur = ""
+                    binding.tilBpjs.visibility = View.GONE
+                }
+            }
+
+        }
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -117,11 +185,15 @@ class RegisterFragment : BaseFragment<FragmentRegisterBinding>() {
     }
 
     private fun hideProgressBar() {
-        binding.pbRegLoading.visible(false)
+        binding.pbRegLoading.visibility = View.GONE
     }
 
     private fun showProgressLoading() {
-        binding.pbRegLoading.visible(true)
+        binding.pbRegLoading.visibility = View.VISIBLE
+    }
+
+    fun String.isEmailValid(): Boolean {
+        return !TextUtils.isEmpty(this) && android.util.Patterns.EMAIL_ADDRESS.matcher(this).matches()
     }
 
 

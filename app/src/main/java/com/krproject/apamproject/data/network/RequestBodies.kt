@@ -12,7 +12,8 @@ object RequestBodies {
         val password:String,
         val nama:String,
         val nohp:String,
-        val nik:String
+        val nik:String,
+        val noBpjs: String
 
     )
 
