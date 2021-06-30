@@ -185,7 +185,8 @@
                 android:id="@+id/tie_reg_email"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="textEmailAddress" />
+                android:inputType="textNoSuggestions"
+                android:maxLines="1"/>
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -210,6 +211,14 @@
                 android:inputType="textPassword" />
 
         </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Password Minimal 8 Karakter"
+            app:layout_constraintTop_toBottomOf="@id/til_reg_password"
+            app:layout_constraintStart_toStartOf="@id/til_reg_password"
+            android:layout_marginTop="8dp"/>
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/til_bpjs"

@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">APAM Project</string>
+    <string name="app_name">RSMM Mobile</string>
     <string name="title_activity_splash_screen">SplashScreen</string>
     <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">First Fragment</string>
@@ -91,6 +91,22 @@
     <string name="conversion_error">Conversion Error</string>
     <string name="title_jadwal_operasi">Jadwal Operasi</string>
     <string name="bpjs">BPJS</string>
+    <string name="prompt_tempat_lahir">Tempat Lahir</string>
+    <string name="prompt_orangtua">Nama Orangtua</string>
+    <string name="prompt_address">Alamat</string>
+    <string name="txt_tanggal_lahir">Tanggal Lahir</string>
+    <string name="prompt_work">Pekerjaan</string>
+    <string name="pilih_foto">Upload Foto KK</string>
+    <string name="pilih_foto_ktp">Upload Foto KTP</string>
+    <string name="pilih_foto_bpjs">Upload Foto BPJS</string>
+    <string name="ambil_foto">Ubah Foto</string>
+    <string name="update_profile">Update Profile</string>
+    <string name="batal">Batal</string>
+    <string name="pilihopsi">Pilih Opsi</string>
+    <string name="kesalahan_izin">Kesalahan Izin</string>
+    <string name="pilih_dari_galeri">Pilih Dari Gallery</string>
+    <string name="dari_kamera">Dari Kamera</string>
+    <string name="filePhoto">MYPROFILE.jpg</string>
     <string-array name="cara_datang">
         <item>- Pilih Cara Datang -</item>
         <item>Datang Sendiri</item>
@@ -108,6 +124,32 @@
         <item>UMUM</item>
         <item>BPJS</item>
     </string-array>
+    <string-array name="array_goldar">
+        <item>Pilih Golongan Darah</item>
+        <item>A</item>
+        <item>B</item>
+        <item>AB</item>
+        <item>O</item>
+    </string-array>
+    <string-array name="array_pendidikan">
+        <item>Pilih Pendidikan</item>
+        <item>SD</item>
+        <item>SMP</item>
+        <item>SMA</item>
+        <item>S1</item>
+        <item>S2</item>
+        <item>S3</item>
+    </string-array>
+    <string-array name="array_status_nikah">
+        <item>Status Pernikahan</item>
+        <item>Belum Menikah</item>
+        <item>Sudah Menikah</item>
+    </string-array>
+    <string-array name="array_jenis_kelamin">
+        <item>Jenis Kelamin</item>
+        <item>Laki-laki</item>
+        <item>Perempuan</item>
+    </string-array>
     <string-array name="pilih_poliklinik">
         <item>Poli Penyakit Dalam</item>
         <item>Poli Bedah</item>
@@ -116,5 +158,7 @@
         <item>Poli Saraf</item>
         <item>Poli Umum</item>
     </string-array>
+
+    <string name="file_location">/storage/emulated/0/</string>
 
 </resources>

@@ -1,205 +1,266 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <FrameLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content">
 
-        <ScrollView
-            android:id="@+id/scrollView2"
+
+        <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+            android:layout_height="match_parent">
 
-            <LinearLayout
-                android:id="@+id/layout"
+            <ScrollView
+                android:id="@+id/scrollView2"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:layout_height="match_parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
 
-                <FrameLayout
-                    android:id="@+id/frame"
+                <LinearLayout
+                    android:id="@+id/layout"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
 
-                    <View
-                        android:id="@+id/bg_header"
+                    <FrameLayout
+                        android:id="@+id/frame"
                         android:layout_width="match_parent"
-                        android:layout_height="250dp"
-                        android:adjustViewBounds="false"
-                        android:background="#376EB6"
-                        android:scaleType="fitCenter" />
+                        android:layout_height="wrap_content">
 
-                    <ImageView
-                        android:id="@+id/eclipse"
-                        android:layout_width="140dp"
-                        android:layout_height="133dp"
-                        android:layout_marginTop="-10dp"
-                        android:layout_gravity="end"
-                        app:srcCompat="@drawable/eclipse" />
-
-                    <LinearLayout
-                        android:id="@+id/linierV"
-                        android:layout_width="match_parent"
-                        android:layout_height="80dp"
-                        android:layout_marginStart="20dp"
-                        android:layout_marginEnd="20dp"
-                        android:layout_marginTop="40dp"
-                        android:orientation="horizontal">
+                        <View
+                            android:id="@+id/bg_header"
+                            android:layout_width="match_parent"
+                            android:layout_height="250dp"
+                            android:adjustViewBounds="false"
+                            android:background="#376EB6"
+                            android:scaleType="fitCenter" />
 
                         <ImageView
-                            android:id="@+id/imageView4"
-                            android:layout_width="80dp"
-                            android:layout_height="80dp"
-                            android:layout_weight="1"
-                            app:srcCompat="@drawable/user" />
+                            android:id="@+id/eclipse"
+                            android:layout_width="140dp"
+                            android:layout_height="133dp"
+                            android:layout_marginTop="-10dp"
+                            android:layout_gravity="end"
+                            app:srcCompat="@drawable/eclipse" />
 
                         <LinearLayout
-                            android:layout_width="200dp"
-                            android:layout_height="match_parent"
-                            android:layout_marginStart="10dp"
-                            android:layout_marginTop="15dp"
-                            android:layout_weight="1"
-                            android:orientation="vertical">
+                            android:id="@+id/linierV"
+                            android:layout_width="match_parent"
+                            android:layout_height="80dp"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginEnd="20dp"
+                            android:layout_marginTop="40dp"
+                            android:orientation="horizontal">
 
-                            <TextView
-                                android:id="@+id/nama"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
+                            <ImageView
+                                android:id="@+id/imageView4"
+                                android:layout_width="80dp"
+                                android:layout_height="80dp"
                                 android:layout_weight="1"
-                                android:fontFamily="@font/montserrat_semibold"
-                                android:text="@string/txt_dummy_name"
-                                android:textColor="#FFFFFF"
-                                android:textSize="18sp"
-                                tools:ignore="NestedWeights" />
+                                app:srcCompat="@drawable/user" />
 
-                            <TextView
-                                android:id="@+id/no_rm"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
+                            <LinearLayout
+                                android:layout_width="200dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginTop="15dp"
                                 android:layout_weight="1"
-                                android:text="@string/txt_dummy_no_rm"
-                                android:fontFamily="@font/montserrat_regular"
-                                android:textColor="#FFFFFF"
-                                android:textSize="14sp" />
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/nama"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:fontFamily="@font/montserrat_semibold"
+                                    android:text="@string/txt_dummy_name"
+                                    android:textColor="#FFFFFF"
+                                    android:textSize="18sp"
+                                    tools:ignore="NestedWeights" />
+
+                                <TextView
+                                    android:id="@+id/no_rm"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="@string/txt_dummy_no_rm"
+                                    android:fontFamily="@font/montserrat_regular"
+                                    android:textColor="#FFFFFF"
+                                    android:textSize="14sp" />
+
+                            </LinearLayout>
+
+                            <ImageButton
+                                android:id="@+id/btn_logout"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginEnd="-10dp"
+                                android:layout_weight="1"
+                                android:src="@drawable/ic_exit_48"
+                                android:backgroundTint="@android:color/transparent"/>
 
                         </LinearLayout>
 
-                        <ImageButton
-                            android:id="@+id/btn_logout"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:layout_marginEnd="-10dp"
-                            android:layout_weight="1"
-                            android:src="@drawable/ic_exit_48"
-                            android:backgroundTint="@android:color/transparent"/>
+                    </FrameLayout>
 
-                    </LinearLayout>
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="360dp"
+                        android:layout_height="170dp"
+                        android:layout_marginTop="-110dp"
+                        android:layout_marginBottom="30dp"
+                        android:layout_gravity="center_horizontal"
+                        android:orientation="horizontal"
+                        app:cardCornerRadius="10dp"
+                        android:elevation="8dp">
 
-                </FrameLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
 
-                <androidx.cardview.widget.CardView
-                    android:layout_width="360dp"
-                    android:layout_height="170dp"
-                    android:layout_marginTop="-110dp"
-                    android:layout_marginBottom="30dp"
-                    android:layout_gravity="center_horizontal"
-                    android:orientation="horizontal"
-                    app:cardCornerRadius="10dp"
-                    android:elevation="8dp">
+                            <com.synnapps.carouselview.CarouselView
+                                android:id="@+id/imageSlider"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                app:indicatorVisibility="gone"
+                                app:indicatorGravity="right|bottom"
+                                app:fillColor="#FAA625"
+                                app:pageColor="#00000000"
+                                app:radius="10dp"
+                                app:slideInterval="6000"
+                                app:strokeColor="#FF777777"
+                                app:strokeWidth="1dp"
+                                app:autoPlay="true"/>
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <TextView
+                        android:id="@+id/title1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:text="@string/txt_layanan"
+                        android:textSize="18sp"
+                        android:textColor="@android:color/black"
+                        android:fontFamily="@font/poppins_medium"/>
 
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent">
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="8dp">
 
-                        <com.synnapps.carouselview.CarouselView
-                            android:id="@+id/imageSlider"
-                            android:layout_width="match_parent"
+                        <Button
+                            android:id="@+id/daftar"
+                            android:layout_width="0dp"
                             android:layout_height="match_parent"
-                            app:indicatorVisibility="gone"
-                            app:indicatorGravity="right|bottom"
-                            app:fillColor="#FAA625"
-                            app:pageColor="#00000000"
-                            app:radius="10dp"
-                            app:slideInterval="6000"
-                            app:strokeColor="#FF777777"
-                            app:strokeWidth="1dp"
-                            app:autoPlay="true"/>
+                            android:layout_weight="1"
+                            style="?attr/borderlessButtonStyle"
+                            android:drawableTop="@drawable/ic_baseline_local_hospital_24"
+                            android:padding="20dp"
+                            android:text="Pendaftaran Online"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                            android:textSize="14sp"
+                            android:textColor="@android:color/black"/>
+
+                        <Button
+                            android:id="@+id/jadwalDokter"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            style="?attr/borderlessButtonStyle"
+                            android:drawableTop="@drawable/ic_baseline_date_range_24"
+                            android:padding="20dp"
+                            android:text="Jadwal  Dokter"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                            android:textSize="14sp"
+                            android:textColor="@android:color/black"/>
+
+                        <Button
+                            android:id="@+id/btn_jadwal_operasi"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            style="?attr/borderlessButtonStyle"
+                            android:drawableTop="@drawable/ic_baseline_dvr_24"
+                            android:padding="20dp"
+                            android:text="Jadwal Operasi"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                            android:textSize="14sp"
+                            android:textColor="@android:color/black"/>
 
                     </LinearLayout>
 
-                </androidx.cardview.widget.CardView>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="15dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="#EFEFEF"/>
 
-                <TextView
-                    android:id="@+id/title1"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="20dp"
-                    android:text="@string/txt_layanan"
-                    android:textSize="18sp"
-                    android:textColor="@android:color/black"
-                    android:fontFamily="@font/poppins_medium"/>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:padding="8dp">
-
-                    <Button
-                        android:id="@+id/daftar"
-                        android:layout_width="0dp"
+                    <LinearLayout
+                        android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        style="?attr/borderlessButtonStyle"
-                        android:drawableTop="@drawable/ic_baseline_local_hospital_24"
-                        android:padding="20dp"
-                        android:text="Pendaftaran Online"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-                        android:textSize="14sp"
-                        android:textColor="@android:color/black"/>
+                        android:orientation="horizontal">
 
-                    <Button
-                        android:id="@+id/jadwalDokter"
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        style="?attr/borderlessButtonStyle"
-                        android:drawableTop="@drawable/ic_baseline_date_range_24"
-                        android:padding="20dp"
-                        android:text="Jadwal  Dokter"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-                        android:textSize="14sp"
-                        android:textColor="@android:color/black"/>
+                        <TextView
+                            android:id="@+id/title2"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp"
+                            android:layout_weight="1"
+                            android:text="Riwayat Antrian"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                            android:textSize="18sp"
+                            android:fontFamily="@font/poppins_medium"/>
 
-                    <Button
-                        android:id="@+id/btn_jadwal_operasi"
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        style="?attr/borderlessButtonStyle"
-                        android:drawableTop="@drawable/ic_baseline_dvr_24"
-                        android:padding="20dp"
-                        android:text="Jadwal Operasi"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-                        android:textSize="14sp"
-                        android:textColor="@android:color/black"/>
+                        <TextView
+                            android:id="@+id/tv_history"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="20dp"
+                            android:layout_weight="1"
+                            android:visibility="gone"
+                            android:text="@string/txt_lihat_lainnya"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                            android:textSize="14sp"
+                            android:textColor="#A1A1A1"
+                            android:fontFamily="@font/poppins_medium"
+                            android:textAlignment="viewEnd"/>
+
+                    </LinearLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvTiket"
+                        android:layout_marginHorizontal="8dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp">
+
+
+                    </androidx.recyclerview.widget.RecyclerView>
 
                 </LinearLayout>
 
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="15dp"
-                    android:layout_marginBottom="10dp"
-                    android:background="#EFEFEF"/>
+            </ScrollView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv_recent_act"
+                android:layout_width="340dp"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="20dp"
+                android:layout_gravity="bottom|center_horizontal"
+                android:layout_marginBottom="30dp"
+                android:backgroundTint="#EFEFEF"
+                android:visibility="invisible">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -207,126 +268,73 @@
                     android:orientation="horizontal">
 
                     <TextView
-                        android:id="@+id/title2"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="20dp"
-                        android:layout_weight="1"
-                        android:text="Riwayat Antrian"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-                        android:textSize="18sp"
-                        android:fontFamily="@font/poppins_medium"/>
-
-                    <TextView
-                        android:id="@+id/tv_history"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginEnd="20dp"
-                        android:layout_weight="1"
-                        android:visibility="gone"
-                        android:text="@string/txt_lihat_lainnya"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-                        android:textSize="14sp"
-                        android:textColor="#A1A1A1"
-                        android:fontFamily="@font/poppins_medium"
-                        android:textAlignment="viewEnd"/>
-
-                </LinearLayout>
-
-                <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/rvTiket"
-                    android:layout_marginHorizontal="8dp"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="15dp">
-
-
-                </androidx.recyclerview.widget.RecyclerView>
-
-            </LinearLayout>
-
-        </ScrollView>
-
-        <androidx.cardview.widget.CardView
-            android:id="@+id/cv_recent_act"
-            android:layout_width="340dp"
-            android:layout_height="wrap_content"
-            app:cardCornerRadius="20dp"
-            android:layout_gravity="bottom|center_horizontal"
-            android:layout_marginBottom="30dp"
-            android:backgroundTint="#EFEFEF"
-            android:visibility="invisible">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/tv_recent_number"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_marginTop="8dp"
-                    android:layout_marginStart="15dp"
-                    android:text="B1"
-                    android:fontFamily="@font/poppins_medium"
-                    android:textSize="28sp"
-                    android:gravity="center"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
-
-                <ImageView
-                    android:layout_width="1dp"
-                    android:layout_height="match_parent"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginBottom="10dp"
-                    android:background="#376EB6"/>
-
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_marginStart="5dp"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:id="@+id/tv_recent_attd"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:id="@+id/tv_recent_number"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
                         android:layout_marginTop="8dp"
-                        android:layout_marginStart="10dp"
-                        android:text="Antrian anda saat ini"
+                        android:layout_marginStart="15dp"
+                        android:text="B1"
                         android:fontFamily="@font/poppins_medium"
-                        android:textSize="16sp"
+                        android:textSize="28sp"
+                        android:gravity="center"
                         android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
 
-                    <TextView
-                        android:id="@+id/tv_recent_dokter"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                    <ImageView
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
                         android:layout_marginStart="10dp"
-                        android:text="@string/dokter"
-                        android:fontFamily="@font/poppins_medium"
-                        android:textSize="12sp"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="#376EB6"/>
 
-                    <TextView
-                        android:id="@+id/tv_recent_poliklinik"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginBottom="8dp"
-                        android:text="@string/poliklinik"
-                        android:fontFamily="@font/poppins_medium"
-                        android:textSize="14sp"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Small"/>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="5dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tv_recent_attd"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginStart="10dp"
+                            android:text="Antrian anda saat ini"
+                            android:fontFamily="@font/poppins_medium"
+                            android:textSize="16sp"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
+
+                        <TextView
+                            android:id="@+id/tv_recent_dokter"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:text="@string/dokter"
+                            android:fontFamily="@font/poppins_medium"
+                            android:textSize="12sp"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
+
+                        <TextView
+                            android:id="@+id/tv_recent_poliklinik"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginBottom="8dp"
+                            android:text="@string/poliklinik"
+                            android:fontFamily="@font/poppins_medium"
+                            android:textSize="14sp"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Small"/>
+
+                    </LinearLayout>
 
                 </LinearLayout>
 
-            </LinearLayout>
+            </androidx.cardview.widget.CardView>
 
-        </androidx.cardview.widget.CardView>
+        </FrameLayout>
 
-    </FrameLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

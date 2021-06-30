@@ -99,6 +99,14 @@
 
     </com.google.android.material.textfield.TextInputLayout>
 
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Password Minimal 8 Karakter"
+        app:layout_constraintTop_toBottomOf="@id/til_password"
+        app:layout_constraintStart_toStartOf="@id/til_password"
+        android:layout_marginTop="8dp"/>
+
     <Button
         android:id="@+id/btn_login"
         android:layout_width="match_parent"

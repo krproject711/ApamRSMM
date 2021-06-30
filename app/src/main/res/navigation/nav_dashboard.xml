@@ -7,14 +7,14 @@
 
     <fragment
         android:id="@+id/poliklinikFragment"
-        android:name="com.krproject.apamproject.ui.dashboard.PoliklinkFormFragment"
+        android:name="com.krproject.apamprojectnew.ui.dashboard.PoliklinkFormFragment"
         android:label="PoliklinikFragment" />
     <fragment
         android:id="@+id/berandaFragment"
-        android:name="com.krproject.apamproject.ui.dashboard.BerandaFragment"
+        android:name="com.krproject.apamprojectnew.ui.dashboard.BerandaFragment"
         android:label="BerandaFragment" />
     <fragment
         android:id="@+id/antrianFragment"
-        android:name="com.krproject.apamproject.ui.dashboard.AntrianFragment"
+        android:name="com.krproject.apamprojectnew.ui.dashboard.AntrianFragment"
         android:label="AntrianFragment" />
 </navigation>
