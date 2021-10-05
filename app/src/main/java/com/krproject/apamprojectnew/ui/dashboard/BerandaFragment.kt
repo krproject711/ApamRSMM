@@ -32,6 +32,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.bumptech.glide.request.RequestOptions
+import com.krproject.apamprojectnew.Consta
 import com.krproject.apamprojectnew.R
 import com.krproject.apamprojectnew.data.network.Resource
 import com.krproject.apamprojectnew.databinding.FragmentBerandaBinding
@@ -40,6 +41,7 @@ import com.krproject.apamprojectnew.ui.base.BaseFragment
 import com.krproject.apamprojectnew.ui.base.ViewModelProviderFactory
 import com.krproject.apamprojectnew.ui.tiket.ListTiketViewModel
 import com.krproject.apamprojectnew.ui.tiket.LkisTiketAdapter
+import com.krproject.apamprojectnew.ui.tiket.ResponseTiket
 import com.krproject.apamprojectnew.util.SharedPreferenceHelper
 import com.synnapps.carouselview.ImageListener
 import java.io.*
@@ -154,16 +156,26 @@ class BerandaFragment : BaseFragment<FragmentBerandaBinding>() {
 //                                Toast.LENGTH_SHORT
 //                            ).show()
 
+                            tiketAdapter.setResponseTiket(loginResponse)
                             tiketAdapter.setJadwalDokter(loginResponse.body.data)
 
                             tiketAdapter.mOnItemClickListener = object : LkisTiketAdapter.OnItemClickListener{
-                                override fun onItemClick() {
-                                    val bundle = bundleOf("responseTiket" to loginResponse)
+                                override fun onItemClick(
+                                    responseTiket: ResponseTiket,
+                                    position: Int
+                                ) {
+                                    val bundle = bundleOf("responseTiket" to loginResponse, "index" to position)
 //                                    navController.navigate(R.id.action_specifyAmountFragment_to_confirmationFragment2, bundle)
-                                    findNavController().navigate(R.id.action_berandaFragment3_to_historyFragment, bundle)
+                                    findNavController().navigate(R.id.action_berandaFragment3_to_antrianFragment2, bundle)
                                 }
 
                             }
+
+                            if (Consta.isReservation){
+                                tiketAdapter.setClickTiket()
+                                Consta.isReservation = false
+                            }
+
 
                             with(binding.rvTiket) {
                                 layoutManager = LinearLayoutManager(context)

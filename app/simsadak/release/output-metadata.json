@@ -1,0 +1,18 @@
+{
+  "version": 2,
+  "artifactType": {
+    "type": "APK",
+    "kind": "Directory"
+  },
+  "applicationId": "com.krproject.apamprojectnew",
+  "variantName": "processSimsadakReleaseResources",
+  "elements": [
+    {
+      "type": "SINGLE",
+      "filters": [],
+      "versionCode": 5,
+      "versionName": "1.0.1",
+      "outputFile": "app-simsadak-release.apk"
+    }
+  ]
+}

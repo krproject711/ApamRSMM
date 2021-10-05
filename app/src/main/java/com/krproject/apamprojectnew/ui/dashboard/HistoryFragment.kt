@@ -35,8 +35,8 @@ class HistoryFragment : BaseFragment<FragmentHistoryBinding>() {
 //            binding.tvPoliklinik.text = now[0].nm_instalasi
 //            binding.debitur.text = now[0].debitur_reg_utama
 //            binding.waktu.text = now[0].tgl_reg_utama
-            binding.txtAntrianSaatIni.text = now.no_urut_pas
-            binding.waktu.text = now.Tgl_reg_utama
+            binding.txtAntrianSaatIni.text = now[0].no_urut_pas
+            binding.waktu.text = now[0].tgl_reg_utama
         }
 
     }

@@ -16,6 +16,7 @@ import android.widget.Toast
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
+import com.krproject.apamprojectnew.Consta
 import com.krproject.apamprojectnew.R
 import com.krproject.apamprojectnew.data.network.Resource
 import com.krproject.apamprojectnew.data.response.dokter.DataGetDokter
@@ -518,6 +519,7 @@ class PoliklinkFormFragment : BaseFragment<FragmentPoliklinkFormBinding>() {
                             findNavController().navigate(R.id.action_poliklinkFormFragment_to_berandaFragment3)
                             Toast.makeText(context, "Reservasi Berhasil", Toast.LENGTH_SHORT).show()
                             val view: View? = requireActivity().currentFocus
+                            Consta.isReservation = true
                             if (view != null) {
                                 val imm: InputMethodManager? =
                                     requireActivity().getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager?

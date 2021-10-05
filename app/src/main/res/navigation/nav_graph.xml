@@ -195,6 +195,9 @@
             app:popUpTo="@id/berandaFragment3"
             app:popUpToInclusive="true" />
 
+        <argument android:name="index"
+            app:argType="integer"/>
+
         <argument android:name="responseTiket"
             app:argType="com.krproject.apamprojectnew.ui.tiket.ResponseTiket"/>
     </fragment>

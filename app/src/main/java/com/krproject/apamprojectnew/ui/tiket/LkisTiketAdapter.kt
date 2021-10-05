@@ -18,15 +18,25 @@ class LkisTiketAdapter(private val activity: Activity) : RecyclerView.Adapter<Lk
     var mOnItemClickListener: OnItemClickListener? = null
 
     interface OnItemClickListener {
-        fun onItemClick()
+        fun onItemClick(responseTiket: ResponseTiket, position: Int)
     }
 
     private var listDokter = ArrayList<Data>()
+    private lateinit var responseTiket : ResponseTiket
 
     fun setJadwalDokter(data: List<Data>?){
         if (data == null) return
         listDokter.clear()
         listDokter.addAll(data)
+    }
+
+    fun setClickTiket(){
+        if (responseTiket.body.data.isNotEmpty())
+        mOnItemClickListener?.onItemClick(responseTiket, position = 0)
+    }
+
+    fun setResponseTiket(responseTikets: ResponseTiket){
+        responseTiket = responseTikets
     }
 
     fun clearJadwalDokter(){
@@ -41,7 +51,7 @@ class LkisTiketAdapter(private val activity: Activity) : RecyclerView.Adapter<Lk
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val data = listDokter[position]
-        holder.bind(data)
+        holder.bind(data, position)
     }
 
     override fun getItemCount(): Int {
@@ -52,7 +62,7 @@ class LkisTiketAdapter(private val activity: Activity) : RecyclerView.Adapter<Lk
 
     inner class ViewHolder(view: View) : RecyclerView.ViewHolder(view){
         @SuppressLint("SetTextI18n")
-        fun bind(data: Data) {
+        fun bind(data: Data, position: Int) {
            with(itemView){
                tv_dokter.text = data.nm_instalasi
                tv_poliklinik.text = data.no_urut_pas
@@ -61,7 +71,7 @@ class LkisTiketAdapter(private val activity: Activity) : RecyclerView.Adapter<Lk
 
                setOnClickListener {
 
-                   mOnItemClickListener?.onItemClick()
+                   mOnItemClickListener?.onItemClick(responseTiket, position = position)
                }
            }
             Log.d("CEKSIZE", "getItemCount: ${listDokter.size}")
