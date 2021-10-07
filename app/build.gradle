@@ -8,14 +8,14 @@ apply plugin: 'androidx.navigation.safeargs'
 android {
     signingConfigs {
         release {
-            storeFile file('/Users/anon/Documents/RsmmMobile')
+            storeFile file('../RsmmMobile.jks')
             storePassword 'rsmm130621'
             keyAlias 'key0'
             keyPassword 'rsmm130621'
         }
 
         debug {
-            storeFile file('/Users/anon/Documents/RsmmMobile')
+            storeFile file('../RsmmMobile.jks')
             storePassword 'rsmm130621'
             keyAlias 'key0'
             keyPassword 'rsmm130621'
