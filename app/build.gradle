@@ -6,21 +6,21 @@ apply plugin: 'kotlin-kapt'
 apply plugin: 'androidx.navigation.safeargs'
 
 android {
-    signingConfigs {
-        release {
-            storeFile file('../RsmmMobile.jks')
-            storePassword 'rsmm130621'
-            keyAlias 'key0'
-            keyPassword 'rsmm130621'
-        }
-
-        debug {
-            storeFile file('../RsmmMobile.jks')
-            storePassword 'rsmm130621'
-            keyAlias 'key0'
-            keyPassword 'rsmm130621'
-        }
-    }
+//    signingConfigs {
+//        release {
+//            storeFile file('../RsmmMobile.jks')
+//            storePassword 'rsmm130621'
+//            keyAlias 'key0'
+//            keyPassword 'rsmm130621'
+//        }
+//
+//        debug {
+//            storeFile file('../RsmmMobile.jks')
+//            storePassword 'rsmm130621'
+//            keyAlias 'key0'
+//            keyPassword 'rsmm130621'
+//        }
+//    }
 
     compileSdkVersion 30
     buildToolsVersion "30.0.2"
