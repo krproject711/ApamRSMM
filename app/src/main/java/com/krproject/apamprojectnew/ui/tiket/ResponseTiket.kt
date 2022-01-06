@@ -1,20 +1,24 @@
 package com.krproject.apamprojectnew.ui.tiket
 
 import android.os.Parcelable
+import androidx.annotation.Keep
 import kotlinx.android.parcel.Parcelize
 
+@Keep
 @Parcelize
 data class ResponseTiket(
     val body: Body,
     val header: Header
 ): Parcelable
 
+@Keep
 @Parcelize
 data class Body(
     val `data`: List<Data>,
     val now: List<Now>
 ): Parcelable
 
+@Keep
 @Parcelize
 data class Header(
     val result: String,
@@ -22,6 +26,7 @@ data class Header(
     val resultMessage: String
 ): Parcelable
 
+@Keep
 @Parcelize
 data class Data(
     val debitur_reg_utama: String,
@@ -33,6 +38,7 @@ data class Data(
     val tgl_reg_utama: String
 ): Parcelable
 
+@Keep
 @Parcelize
 data class Now(
     val debitur_reg_utama: String,

@@ -29,15 +29,15 @@ class AntrianFragment : BaseFragment<FragmentAntrianBinding>() {
         Log.d("CEKDATA", "responseTiket: $responseTiket position: $position")
 
         binding.tvTanggal.text = responseTiket.body.data[position].tgl_reg_utama
-        binding.tvTiketPoliklinik.text = responseTiket.body.data[position].nm_instalasi
+        binding.tvTiketPoliklinik.text = responseTiket.body.data[position].nm_instalasi + "(${responseTiket.body.now[0].nmlengkap})"
         binding.tvTiketDebitur.text = responseTiket.body.data[position].debitur_reg_utama
         binding.tvTiketAntrian.text = responseTiket.body.data[position].no_urut_pas
 
         binding.tvTiketAntrianSekarang.text = responseTiket.body.now[0].no_urut_pas
         binding.tvDokter.text = responseTiket.body.now[0].nmlengkap
-        binding.tvPoliklinik.text = responseTiket.body.now[0].nm_instalasi
-        binding.debitur.text = responseTiket.body.now[0].debitur_reg_utama
-        binding.waktu.text = responseTiket.body.now[0].tgl_reg_utama
+//        binding.tvPoliklinik.text = responseTiket.body.now[0].nm_instalasi
+//        binding.debitur.text = responseTiket.body.now[0].debitur_reg_utama
+//        binding.waktu.text = responseTiket.body.now[0].tgl_reg_utama
     }
 
     override fun getFragmentBinding(

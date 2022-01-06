@@ -17,12 +17,12 @@
 
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/imageView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="70dp"
         app:layout_constraintEnd_toStartOf="@+id/guideline1"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/logo_rsmm" />
+        app:srcCompat="@drawable/logorsmmbulat" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline1"
@@ -31,15 +31,16 @@
         android:orientation="vertical"
         app:layout_constraintGuide_percent="0.45" />
 
-    <TextView
+    <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
         android:layout_marginStart="8dp"
         android:fontFamily="@font/montserrat_semibold"
         android:text="@string/txt_apam"
         android:textColor="@android:color/black"
         android:textSize="42sp"
+        android:src="@drawable/logobpm"
         app:layout_constraintBottom_toBottomOf="@id/imageView2"
         app:layout_constraintStart_toEndOf="@+id/guideline1"
         app:layout_constraintTop_toTopOf="@id/imageView2" />
@@ -49,10 +50,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:fontFamily="@font/montserrat_semibold"
-        android:text="@string/txt_rsmm"
+        android:text="Aplikasi Pendaftaran Online"
         android:textAlignment="center"
         android:textColor="#000000"
-        android:textSize="28sp"
+        android:textSize="20sp"
+        android:layout_marginTop="24dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView2" />
@@ -63,10 +65,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:fontFamily="@font/montserrat_semibold"
-        android:text="@string/txt_apam_detail"
+        android:text="RUMAH SAKIT MM\n INDRAMAYU"
         android:textAlignment="center"
         android:textColor="#000000"
-        android:textSize="20sp"
+        android:textSize="26sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/judul" />

@@ -160,5 +160,6 @@
     </string-array>
 
     <string name="file_location">/storage/emulated/0/</string>
+    <string name="desc">Harap datang sebelum saat jam praktek dokter dan bawa persyaratan seperti: \n1. Fotocopy KTP \n2. Fotocopy KK \n3. Fotocopy Kartu BPJS \n4. Surat Kontrol atau Surat Rujukan</string>
 
 </resources>
