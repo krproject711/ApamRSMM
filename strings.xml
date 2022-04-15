@@ -1,0 +1,165 @@
+<resources>
+    <string name="app_name">RSMM Mobile</string>
+    <string name="title_activity_splash_screen">SplashScreen</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="title_login">Silahkan masuk dengan data anda yang terdaftar</string>
+    <string name="title_register">Lengkapi data pribadi anda</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome !"</string>
+    <string name="invalid_email">Not a valid email</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+    <string name="title_activity_beranda">MainActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="title_pendaftaran">Pendaftaran Online</string>
+    <string name="title_dokter">Jadwal Dokter</string>
+    <string name="title_operasi">Jadwal Operasi</string>
+    <string name="poliklinik">Poliklinik Penyakit Dalam</string>
+    <string name="dokter">dr. Reza Mahdi, Sp. PD</string>
+    <string name="debitur">BPJS</string>
+    <string name="waktu">Selasa, 30 November 2020</string>
+    <string name="txt_rsmm">RSMM INDRAMAYU</string>
+    <string name="txt_apam_detail">Aplikasi Antrian dan Pasien Mandiri</string>
+    <string name="txt_masuk">MASUK</string>
+    <string name="txt_daftar">DAFTAR</string>
+    <string name="txt_apam">APAM</string>
+    <string name="txt_welcome">Selamat Datang</string>
+    <string name="txt_back">Kembali</string>
+    <string name="txt_back_detail">Kembali ke Welcome Screen</string>
+    <string name="txt_nik">NIK</string>
+    <string name="txt_spinner">Gelar</string>
+    <string name="txt_np_hp">Nomor Handphone</string>
+    <string name="txt_nama">Nama</string>
+    <string name="txt_register">DAFTAR</string>
+    <string name="txt_tuan">Tn</string>
+    =======
+    >>>>>>> 22819489f13f3b07c0805f0aea7f6b9d0df76af8
+    <string-array name="jenis_kelamin">
+        <item>Tn.</item>
+        <item>Ny.</item>
+        <item>Nn.</item>
+        <item>An.</item>
+        <item>By.</item>
+    </string-array>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="txt_ok">OK</string>
+    <string name="txt_no_rm">No. Rekam Medis :</string>
+    <string name="txt_reg_ok">Pendaftaran anda berhasil</string>
+    <string name="txt_dummy_name">Nama Pasien</string>
+    <string name="txt_dummy_no_rm">012345</string>
+    <string name="txt_layanan">Layanan Kami</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="pilih_poliklinik">Pilih Poliklinik</string>
+    <string name="title_daftar">Lengkapi data dibawah ini</string>
+    <string name="title_antrian">Antrian Anda</string>
+    <string name="txt_tanggal">Tanggal</string>
+    <string name="txt_format_jam">17:22:45</string>
+    <string name="title_poliklinik">Poliklinik</string>
+    <string name="title_debitur">Debitur</string>
+    <string name="antrian_anda">Antrian anda</string>
+    <string name="antrian_saat_ini">Antrian saat ini</string>
+    <string name="nomor_saat_ini">D3</string>
+    <string name="nomor_anda">D7</string>
+    <string name="txt_kembali">Kembali</string>
+    <string name="txt_cara_datang">Cara Kedatangan</string>
+    <string name="txt_pilih_dokter">Dokter</string>
+    <string name="txt_pilih_debitur">Debitur</string>
+    <string name="txt_nomor_kartu">Nomor Kartu</string>
+    <string name="txt_nomor_rujukan">Nomor Rujukan</string>
+    <string name="txt_form_pendaftaran">Form Pendaftaran</string>
+    <string name="txt_lihat_lainnya"><![CDATA[Lihat Lainnya >]]></string>
+    <string name="txt_riwayat_antrian">Riwayat Antrian</string>
+    <string name="title_jadwal_dokter">Jadwal Dokter</string>
+    <string name="hari">Senin</string>
+    <string name="range_jam">(07.00 - 12.00)</string>
+    <string name="txt_logo_rsmm">Logo RSMM</string>
+    <string name="network_failure">Gagal Mengambil Data</string>
+    <string name="conversion_error">Conversion Error</string>
+    <string name="title_jadwal_operasi">Jadwal Operasi</string>
+    <string name="bpjs">BPJS</string>
+    <string name="prompt_tempat_lahir">Tempat Lahir</string>
+    <string name="prompt_orangtua">Nama Orangtua</string>
+    <string name="prompt_address">Alamat</string>
+    <string name="txt_tanggal_lahir">Tanggal Lahir</string>
+    <string name="prompt_work">Pekerjaan</string>
+    <string name="pilih_foto">Upload Foto KK</string>
+    <string name="pilih_foto_ktp">Upload Foto KTP</string>
+    <string name="pilih_foto_bpjs">Upload Foto BPJS</string>
+    <string name="ambil_foto">Ubah Foto</string>
+    <string name="update_profile">Update Profile</string>
+    <string name="batal">Batal</string>
+    <string name="pilihopsi">Pilih Opsi</string>
+    <string name="kesalahan_izin">Kesalahan Izin</string>
+    <string name="pilih_dari_galeri">Pilih Dari Gallery</string>
+    <string name="dari_kamera">Dari Kamera</string>
+    <string name="filePhoto">MYPROFILE.jpg</string>
+    <string-array name="cara_datang">
+        <item>- Pilih Cara Datang -</item>
+        <item>Datang Sendiri</item>
+        <item>Puskesmas</item>
+        <item>Klinik</item>
+        <item>Rumah Sakit Lain</item>
+    </string-array>
+    <string-array name="dokter_tujuan">
+        <item>- Pilih Dokter -</item>
+        <item>dr. Reza Mahdi, Sp. PD</item>
+        <item>dr. Sopyan, Sp. PD</item>
+    </string-array>
+    <string-array name="pilih_debitur">
+        <item>Pilih Jenis Debitur</item>
+        <item>UMUM</item>
+        <item>BPJS</item>
+    </string-array>
+    <string-array name="array_goldar">
+        <item>Pilih Golongan Darah</item>
+        <item>A</item>
+        <item>B</item>
+        <item>AB</item>
+        <item>O</item>
+    </string-array>
+    <string-array name="array_pendidikan">
+        <item>Pilih Pendidikan</item>
+        <item>SD</item>
+        <item>SMP</item>
+        <item>SMA</item>
+        <item>S1</item>
+        <item>S2</item>
+        <item>S3</item>
+    </string-array>
+    <string-array name="array_status_nikah">
+        <item>Status Pernikahan</item>
+        <item>Belum Menikah</item>
+        <item>Sudah Menikah</item>
+    </string-array>
+    <string-array name="array_jenis_kelamin">
+        <item>Jenis Kelamin</item>
+        <item>Laki-laki</item>
+        <item>Perempuan</item>
+    </string-array>
+    <string-array name="pilih_poliklinik">
+        <item>Poli Penyakit Dalam</item>
+        <item>Poli Bedah</item>
+        <item>Poli Anak</item>
+        <item>Poli Kebidanan dan Kandungan</item>
+        <item>Poli Saraf</item>
+        <item>Poli Umum</item>
+    </string-array>
+
+    <string name="file_location">/storage/emulated/0/</string>
+    <string name="desc">Harap datang sebelum saat jam praktek dokter dan bawa persyaratan seperti: \n1. Fotocopy KTP \n2. Fotocopy KK \n3. Fotocopy Kartu BPJS \n4. Surat Kontrol atau Surat Rujukan</string>
+
+</resources>
